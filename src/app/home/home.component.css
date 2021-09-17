@@ -48,9 +48,9 @@ h3 {
   margin: 0;
 }
 
-.main-button {
-  margin: 7vh 0 0 0;
-  padding: 2vh 4vh;
+button {
+  margin: 4vh 0 0 0;
+  padding: 1.7vh 3vh;
   cursor: pointer;
 }
 
@@ -145,12 +145,6 @@ h3 {
 .fourth-container {
   width: 80%;
   text-align: center;
-}
-
-.second-button {
-  margin-top: 3vh;
-  padding: 2vh 4vh;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,0 +1,48 @@
+.wrapper {
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 7.5vh;
+  text-shadow: 0 0 20px rgb(192 219 255 / 48%), 0 0 8px rgb(65 120 255 / 24%);
+  margin: 0 0 2vh 0;
+}
+
+p {
+  text-align: justify;
+}
+
+button {
+  margin: 3vh 0 0 0;
+  padding: 2vh 4vh;
+  cursor: pointer;
+}
+
+.fourth-wrapper {
+  height: 40vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourth-container {
+  width: 80%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+}
