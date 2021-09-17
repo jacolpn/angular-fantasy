@@ -30,11 +30,16 @@
 
 .main-text {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 20px
+}
+
+.text-angular {
+  color: #1976d2;
 }
 
 h1 {
   font-size: 7.5vh;
+  text-shadow: 0 0 20px rgb(192 219 255 / 48%), 0 0 8px rgb(65 120 255 / 24%);
   margin: 0 0 2vh 0;
 }
 
@@ -50,7 +55,7 @@ h3 {
 }
 
 .main-text-like {
-  font-size: 2vh;
+  font-size: 1.4vh;
   margin: 1vh 0 3vh 0;
   padding: 0;
 }
@@ -143,7 +148,7 @@ h3 {
 }
 
 .second-button {
-  margin-top: 5vh;
+  margin-top: 3vh;
   padding: 2vh 4vh;
   cursor: pointer;
 }
