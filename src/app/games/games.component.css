@@ -1,6 +1,6 @@
 .wrapper {
   height: 80vh;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@ button {
 
 .fourth-wrapper {
   height: 40vh;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;

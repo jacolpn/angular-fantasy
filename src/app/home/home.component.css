@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -52,6 +52,19 @@ button {
   margin: 4vh 0 0 0;
   padding: 1.7vh 3vh;
   cursor: pointer;
+  display: inline-block;
+  outline-style: none;
+  line-height: 1;
+  border: 0;
+  border-radius: 0.5vh;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  color: #fff;
+  background-color: #1976d2;
+}
+
+button:hover {
+  background-color: #0d47a1;
 }
 
 .main-text-like {
@@ -69,20 +82,20 @@ button {
 .main-square-one {
   height: 15vh;
   width: 25vw;
-  background-color: white;
+  background-color: #fff;
   border-radius: 5px;
 }
 
 .main-square-two {
   height: 35vh;
   width: 30vw;
-  background-color: white;
+  background-color: #fff;
   border-radius: 5px;
 }
 
 .second-wrapper {
   height: 80vh;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +116,7 @@ button {
   height: 40vh;
   width: 55vw;
   margin: 6vh 0 0 0;
-  background-color: white;
+  background-color: #fff;
   border-radius: 5px;
 }
 
@@ -123,20 +136,20 @@ button {
 .third-square-one {
   height: 40vh;
   width: 30vw;
-  background-color:white;
+  background-color:#fff;
   border-radius: 5px;
 }
 
 .third-square-two {
   height: 40vh;
   width: 30vw;
-  background-color: white;
+  background-color: #fff;
   border-radius: 5px;
 }
 
 .fourth-wrapper {
   height: 40vh;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
