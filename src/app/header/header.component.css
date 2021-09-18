@@ -1,23 +1,78 @@
 nav {
-    height: 4vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    border-radius: 5px 5px 0 0;
-    padding: 0 8px 10px 8px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 0 8px 10px 8px;
 }
 
-img {
-    cursor: pointer;
+.home {
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-a:hover {
-    color: #1976d2;
+.container-login {
+  display: flex;
+  align-items: center;
+}
+
+.container-text-login {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  text-align: right;
+}
+
+.image-login {
+  border-radius: 5vh;
+  margin-right: 1.4vh;
+}
+
+.sign-out {
+  margin-top: -1.5vh;
+  font-size: small;
+  cursor: pointer;
+  color: gray;
+  width: 26px;
+}
+
+.sign-out:hover {
+  color: #D32F2F;
+}
+
+.container-sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2vh;
+}
+
+.text-sign-in:hover {
+  background-color: #1976d2;
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+}
+
+.google-icon {
+  padding: 1vh 1.2vh 1vh 2vh;
+  border-right: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+.text-sign-in {
+  padding: 1vh 2vh 1vh 1.2vh;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    height: 8vh;
+  }
 }

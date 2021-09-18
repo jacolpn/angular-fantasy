@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  constructor(public auth: AuthService, private db: AngularFirestore) {
+    // const things = db.collection('users').valueChanges();
+    // things.subscribe(console.log);
+  }
 
   ngOnInit(): void { }
 }
