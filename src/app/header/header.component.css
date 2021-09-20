@@ -1,15 +1,17 @@
 nav {
-  height: 5vh;
+  height: 1.2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  border-radius: 5px 5px 0 0;
-  padding: 0 8px 10px 8px;
+  border-radius: .5em .5em 0 0;
+  padding: 1.3em .8em .8em .8em;
+  margin-bottom: 1em;
 }
 
 .home {
   cursor: pointer;
+  height: 4em;
 }
 
 a {
@@ -24,24 +26,20 @@ a {
   align-items: center;
 }
 
-.container-text-login {
-  margin: 0;
-  padding: 0;
-  cursor: default;
-  text-align: right;
+.image-login {
+  border-radius: 5em;
+  margin-right: .5em;
+  height: 2.3em;
 }
 
-.image-login {
-  border-radius: 5vh;
-  margin-right: 1.4vh;
+.container-text-login {
+  cursor: default;
 }
 
 .sign-out {
-  margin-top: -1.5vh;
   font-size: small;
   cursor: pointer;
   color: gray;
-  width: 26px;
 }
 
 .sign-out:hover {
@@ -53,26 +51,20 @@ a {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 2vh;
+  border-radius: .6em;
 }
 
 .text-sign-in:hover {
   background-color: #1976d2;
-  border-top-right-radius: 2vh;
-  border-bottom-right-radius: 2vh;
+  border-top-right-radius: .6em;
+  border-bottom-right-radius: .6em;
 }
 
 .google-icon {
-  padding: 1vh 1.2vh 1vh 2vh;
+  padding: .4em .6em .5em 1em;
   border-right: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
 .text-sign-in {
-  padding: 1vh 2vh 1vh 1.2vh;
-}
-
-@media only screen and (max-width: 600px) {
-  nav {
-    height: 8vh;
-  }
+  padding: .4em 1em .5em .6em;
 }

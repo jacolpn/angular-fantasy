@@ -1,0 +1,112 @@
+<section class="main-wrapper">
+  <img src="../../../assets/images/background.jpg" class="main-background">
+    
+  <div class="main-container-text">
+    <div class="main-text">
+      
+      <h1>Estude <span class="text-angular">Angular</span> de uma forma divertida</h1>
+
+      <h3>Chega de cursos, vídeos e artigos chatos.</h3>
+      <h3>Aprenda a codificar de uma maneira nova, divertida e eficaz.</h3>
+
+      <button [routerLink]="['/games']">Jogar & Aprender Angular</button>
+      
+      <div>
+        <p class="main-text-like">Junte-se a mais de 2 pessoas que começaram a jogar</p>
+      </div>
+    </div>
+
+    
+    <div class="main-square-wrapper">
+      <p class="main-title-demonstration"><i>Demonstração</i></p>
+
+      <div class="main-square">
+        <div class="main-squares-two">
+          <div class="main-square-container">
+            <p class="main-text-help">
+              <i><b>Ex:</b> Utilize a interpolação escrevendo "{{ hello }}" no campo abaixo.</i>
+            </p>
+
+            <div class="main-square-one">
+              <p>1</p>
+
+              <input
+                *ngIf="
+                  removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(hello)
+                  && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(helloTwo)
+                "
+                [(ngModel)]="helloVar"
+                placeholder="{{ hello }}"
+                type="text"
+              >
+
+              <div
+                *ngIf="
+                  removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)
+                  || removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(helloTwo)
+                "
+                class="container-text-complete"
+              >
+                <p class="main-first-text-complete">{{</p>
+                <p class="main-second-text-complete">Olá Mundo</p>
+                <p class="main-third-text-complete">}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-square-two">
+            <div class="main-container-person">
+              <img src="../../../assets/images/person.png" class="main-person">
+              <img class="main-shadow" src="../../../assets/images/shadow.png">
+            </div>
+
+            <div class="main-ballon">
+              <p 
+                *ngIf="
+                  helloVar.length > 0 
+                  && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(hello)
+                  && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(helloTwo)
+                "
+                class="main-animation-loading"
+              >
+                <span class="first-dot">.</span>
+                <span class="second-dot">.</span>
+                <span class="third-dot">.</span>
+              </p>
+
+              <p
+                *ngIf="
+                  removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)
+                  || removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(helloTwo)
+                "
+                class="main-ballon-text"
+              >
+                Olá Mundo!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-container-text-help-two">
+          <p class="main-text-help-two">
+            <i>
+              A interpolação de texto permite incorporar valores de string dinâmicos 
+              em seus modelos HTML. Use a interpolação para alterar dinamicamente o que 
+              aparece em uma visualização do aplicativo, como a exibição de uma saudação
+              personalizada que inclui um "Olá Mundo".
+            </i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img
+    class="main-confetti"
+    *ngIf="
+      removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)
+      || removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(helloTwo)
+    "
+    src="../../../assets/images/confetti-3.gif"
+  >
+</section>

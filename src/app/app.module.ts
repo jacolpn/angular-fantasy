@@ -7,17 +7,17 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { GamesComponent } from './games/games.component';
 
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     FooterComponent,
     HeaderComponent,
     GamesComponent
@@ -25,6 +25,8 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HomeModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.configGoogleFirebase)

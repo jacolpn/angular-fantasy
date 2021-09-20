@@ -1,8 +1,9 @@
 <nav>
-  <img class="home" [routerLink]="['/']" height="60" src="../../assets/images/logo.png" alt="">
+  <img class="home" [routerLink]="['/']" src="../../assets/images/logo.png" alt="">
 
   <div class="container-login" *ngIf="auth.user$ | async as user; else login">
-    <img class="image-login" [routerLink]="['/']" height="35" [src]="user.photoURL" alt="">
+    <img class="image-login" [routerLink]="['/']" [src]="user.photoURL" alt="">
+  
     <div class="container-text-login">
       <p>Olá <span>{{ user.displayName }}</span></p>
       <p class="sign-out" (click)="auth.signOut()">sair</p>
@@ -12,6 +13,7 @@
   <ng-template #login>
     <div class="container-sign-in">
       <img class="google-icon" height="18" src="../../assets/images/google.png" alt="">
+  
       <a class="text-sign-in" (click)="auth.googleSignIn()">Entrar</a>
     </div>
   </ng-template>

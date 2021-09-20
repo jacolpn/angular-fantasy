@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
@@ -15,8 +14,7 @@ export class AuthService {
 
   constructor(
     private afAuth: AngularFireAuth,
-    private afs: AngularFirestore,
-    private router: Router
+    private afs: AngularFirestore
   ) {
     this.user$ = this.afAuth.authState.pipe(switchMap((user: any) => {
       if (user) {
@@ -24,7 +22,7 @@ export class AuthService {
       } else {
         return of(null);
       }
-    }))
+    }));
   }
 
   async googleSignIn() {
@@ -38,7 +36,7 @@ export class AuthService {
     return this.afAuth.signOut();
   }
 
-  private updateUserData({uid, email, displayName, photoURL}: any) {
+  private updateUserData({ uid, email, displayName, photoURL }: any) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${uid}`);
     const data = { uid, email, displayName, photoURL }
 
