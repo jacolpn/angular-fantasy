@@ -1,5 +1,5 @@
 .main-wrapper {
-  height: 45em;
+  height: 50em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
 
 .main-background {
   position: absolute;
-  height: 45em;
+  height: 50em;
   width: 100%;
   z-index: 0;
   opacity: 0.08;
@@ -41,46 +41,6 @@
   font-weight: 800;
   color: #1976d2;
   z-index: 9;
-}
-
-h1 {
-  font-size: 3.8em;
-  text-shadow: 0 0 20px rgb(192 219 255 / 48%), 0 0 8px rgb(65 120 255 / 24%);
-  margin-bottom: .2em;
-  z-index: 9;
-}
-
-h3 {
-  font-weight: 500;
-  z-index: 9;
-}
-
-button {
-  padding: 1em 2em;
-  cursor: pointer;
-  display: inline-block;
-  outline-style: none;
-  line-height: 1;
-  border: 0;
-  border-radius: .2em;
-  font-weight: 700;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 .1em inset;
-  background: linear-gradient(-45deg, #0d47a1, #1976d2);
-    background-size: 100% 100%;
-    animation: gradient 15s ease infinite;
-  z-index: 9;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .main-text-like {
@@ -411,11 +371,6 @@ button {
 }
 
 @media only screen and (max-width: 760px) {
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: .3em;
-  }
-
   .main-wrapper {
     height: 60em;
   }
@@ -524,9 +479,3 @@ button {
     height: 60em;
   }
 }
-
-/* @media screen and (-webkit-min-device-pixel-ratio:0) { 
-  input {
-    font-size: 13px;
-  }
-} */
