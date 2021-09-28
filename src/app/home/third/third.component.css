@@ -39,11 +39,11 @@ p {
   
 @media only screen and (max-width: 760px) {
   .third-wrapper {
-    height: 55em;
+    height: 60em;
   }
   
   .third-background {
-    height: 55em;
+    height: 60em;
   }
 
   .third-container {

@@ -49,6 +49,40 @@ button {
   color: #fff;
 }
 
+input {
+  height: 2.6em;
+  width: 12em;
+  padding-left: .7em;
+  color: #fff;
+  font-weight: 600;
+  z-index: 9;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  background-color: #58606b;
+  border-radius: .2em;
+}
+
+input::placeholder {
+  color: #eaeff3;
+  opacity: 0.5;
+}
+
+/* body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(-45deg, #3a3841, #34313d);
+	background-size: 1500% 1500%;
+	animation: gradient 15s ease infinite;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0c0120;
+  border: .5em solid #070114;
+} */
+
 @keyframes gradient-button {
   0% {
     background-position: 0% 50%;

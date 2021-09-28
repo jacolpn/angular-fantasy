@@ -1,0 +1,153 @@
+<section>
+  <div class="stepper-wrapper">
+    <div class="stepper-container">
+      <div class="stepper-circle" style="background-color: #0d47a1;">1</div>
+      <div class="stepper-bar"></div>
+      <div class="stepper-circle">2</div>
+      <div class="stepper-bar"></div>
+      <div class="stepper-circle">3</div>
+      <div class="stepper-bar"></div>
+      <div class="stepper-circle">4</div>
+    </div>
+  </div>
+
+  <div class="level-wrapper">
+    <div class="level-container">
+      <div class="level-text">
+        <p>
+          You're a hero! You defeated Plutus. But it looks like it was not without small losses. 
+          The Arthur lost some health points in the battle. You need to help him to restore them. 
+          Use the order property and place Arthur on the food.
+        </p>
+        
+        <div>
+          <div class="input-wrapper">
+            <div class="input-container">
+              <p class="title-ts">introduction.component.ts</p>
+              <div class="line-container margin-bottom">
+                <p class="line-number">1</p>
+                <p>{{ firstLine }}</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">2</p>
+                <input
+                  *ngIf="
+                    removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect)
+                    && removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrectTwo)
+                  "
+                  [(ngModel)]="textInput"
+                  class="line-one-space-left"
+                  type="text"
+                >
+
+                <div
+                  *ngIf="
+                    removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)
+                    || removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrectTwo)
+                  "
+                  class="container-text-complete line-one-space-left"
+                >
+                  <p class="main-first-text-complete">{{ textCorrect }}</p>
+                </div>
+              </div>
+              <div class="line-container">
+                <p class="line-number">3</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">4</p>
+                <p class="line-one-space-left">{{ thirdLine }}</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">5</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">6</p>
+                <p class="line-one-space-left">{{ fourthLine }}</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">7</p>
+                <p >{{ fifthLine }}</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">8</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="input-wrapper">
+            <div class="input-container">
+              <p class="title-ts">introduction.component.html</p>
+              <div class="line-container">
+                <p class="line-number">1</p>
+                <p>{{ firstLineHtml }}</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">2</p>
+                <input
+                  *ngIf="removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)"
+                  [(ngModel)]="textInputHtml"
+                  class="line-one-space-left"
+                  type="text"
+                >
+  
+                <div
+                  *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+                  class="container-text-complete line-one-space-left"
+                >
+                  <p class="main-first-text-complete">{{ textCorrectHtml }}</p>
+                </div>
+              </div>
+              <div class="line-container">
+                <p class="line-number">4</p>
+                <p>{{ thirdLineHtml }}</p>
+              </div>
+              <div class="line-container">
+                <p class="line-number">5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="level-map">
+        <div class="main-ballon">
+          <p
+            *ngIf="
+              (
+                textInputHtml.length > 0
+                && removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)
+              )
+              || (
+                textInput.length > 0
+                && removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect)
+                && removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrectTwo)
+              )
+            "
+            class="main-animation-loading"
+          >
+            <span class="first-dot">.</span>
+            <span class="second-dot">.</span>
+            <span class="third-dot">.</span>
+          </p>
+
+          <p 
+            *ngIf="
+              (
+                removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)
+              )
+              && (
+                removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)
+                || removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrectTwo)
+              )
+            "
+            class="main-ballon-text"
+          >
+            Olá Mundo!
+          </p>
+        </div>
+
+        <div class="gaucho"></div>        
+      </div>
+    </div>
+  </div>
+</section>

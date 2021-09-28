@@ -129,25 +129,6 @@
   z-index: 9;
 }
 
-.main-square-one input {
-  height: 2.6em;
-  width: 12em;
-  padding-left: .7em;
-  color: #fff;
-  font-weight: 600;
-  z-index: 9;
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
-  background-color: #58606b;
-  border-radius: .2em;
-}
-
-.main-square-one input::placeholder {
-  color: #eaeff3;
-  opacity: 0.5;
-}
-
 .container-text-complete {
   display: flex;
   width: 10.5em;
