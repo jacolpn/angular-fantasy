@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-first',
-  templateUrl: './first.component.html',
-  styleUrls: ['./first.component.css']
+  selector: 'app-second',
+  templateUrl: './second.component.html',
+  styleUrls: ['./second.component.css']
 })
-export class FirstComponent implements OnInit, AfterViewInit {
+export class SecondComponent implements OnInit {
   openModal: boolean = false;
   modaldialog: boolean = false;
   firstLine: string = "export class IntroductionComponent implements OnInit {";

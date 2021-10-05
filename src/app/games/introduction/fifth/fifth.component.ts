@@ -1,22 +1,16 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-first',
-  templateUrl: './first.component.html',
-  styleUrls: ['./first.component.css']
+  selector: 'app-fifth',
+  templateUrl: './fifth.component.html',
+  styleUrls: ['./fifth.component.css']
 })
-export class FirstComponent implements OnInit, AfterViewInit {
+export class FifthComponent implements OnInit {
   openModal: boolean = false;
   modaldialog: boolean = false;
-  firstLine: string = "export class IntroductionComponent implements OnInit {";
   textInput: string = "";
-  thirdLine: string = "constructor() { }";
-  fourthLine: string = "ngOnInit(): void { }";
-  fifthLine: string = "}";
   textCorrect: string = "texto";
 
-  firstLineHtml: string = "<section>";
-  thirdLineHtml: string = "</section>";
   textInputHtml: string = "";
   textCorrectHtml: string = "{{ texto }}";
 

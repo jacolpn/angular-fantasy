@@ -6,11 +6,19 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { routes } from 'src/app/app-routing.module';
+import { SecondComponent } from './second/second.component';
+import { ThirdComponent } from './third/third.component';
+import { FourthComponent } from './fourth/fourth.component';
+import { FifthComponent } from './fifth/fifth.component';
 
 @NgModule({
   declarations: [
     IntroductionComponent,
-    FirstComponent
+    FirstComponent,
+    SecondComponent,
+    ThirdComponent,
+    FourthComponent,
+    FifthComponent
   ],
   imports: [
     CommonModule,

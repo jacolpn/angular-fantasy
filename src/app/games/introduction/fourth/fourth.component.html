@@ -31,55 +31,7 @@
 
           <div class="line-container margin-bottom">
             <p class="line-number">1</p>
-            <p>{{ firstLine }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">2</p>
-
-              <div *ngIf="removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect)">
-                <input
-                  [(ngModel)]="textInput"
-                  class="line-one-space-left first-input"
-                  type="text"
-                  (focusout)="conclude()"
-                >
-                : string = "Olá Mundo";
-              </div>
-
-            <div
-              *ngIf="removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)"
-              class="container-text-complete line-one-space-left"
-            >
-              <p class="main-first-text-complete">texto: string = "Ola Mundo";</p>
-            </div>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">3</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">4</p>
-            <p class="line-one-space-left">{{ thirdLine }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">5</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">6</p>
-            <p class="line-one-space-left">{{ fourthLine }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">7</p>
-            <p >{{ fifthLine }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">8</p>
+            <p>Lorem ipsum Lorem ipsum </p>
           </div>
         </div>
 
@@ -94,38 +46,9 @@
             <p>app.component.html</p>
           </div>
 
-          <div class="line-container">
+          <div class="line-container margin-bottom">
             <p class="line-number">1</p>
-            <p>{{ firstLineHtml }}</p>
-          </div>
-
-          <div class="line-container">
-
-            <p class="line-number">2</p>
-
-            <input
-              *ngIf="removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)"
-              [(ngModel)]="textInputHtml"
-              class="line-one-space-left"
-              type="text"
-              (focusout)="conclude()"
-            >
-
-            <div
-              *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
-              class="container-text-complete line-one-space-left"
-            >
-              <p class="main-first-text-complete">{{ textCorrectHtml }}</p>
-            </div>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">4</p>
-            <p>{{ thirdLineHtml }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">5</p>
+            <p>Lorem ipsum Lorem ipsum </p>
           </div>
         </div>
       </div>
@@ -152,6 +75,9 @@
             <span class="third-dot">.</span>
           </p>
 
+          <p class="main-ballon-text">
+            Olá Mundo!
+          </p>
           <p 
             *ngIf="
               (removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml))
@@ -185,26 +111,25 @@
   
         <div class="text-contents-modal" *ngIf="openModal">
           <div class="text-modal-help">
-            <h3>Interpolation:</h3>
+            <h3>Lorem ipsum Lorem ipsum:</h3>
             <br>
 
             <p>
-              A interpolação de texto permite incorporar valores de string dinâmicos 
-              em seus modelos HTML. Use a interpolação para alterar dinamicamente o que 
-              aparece em uma visualização do aplicativo, como a exibição de uma saudação
-              personalizada que inclui um "Olá Mundo".
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             </p>
             
             <br>
             <i>
               <b>Ex:</b>
-              Declare uma variavel com o nome "texto" e utilize a 
-              interpolação escrevendo "{{ textCorrectHtml }}" no html.
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             </i>
           </div>
 
           <div class="gif-modal-help">
-            <img class="modal-gif-img" src="../../../../assets/gifs/solution-002.gif">
+            <img class="modal-gif-img" src="">
           </div>
         </div>
       </div>
