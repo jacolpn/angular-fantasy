@@ -142,16 +142,6 @@
   z-index: 9;
 }
 
-.main-second-text-complete {
-  color: rgb(114, 113, 113) !important;
-  z-index: 9;
-}
-
-.main-third-text-complete {
-  color: #1976d2 !important;
-  z-index: 9;
-}
-
 .main-square-two {
   height: 13em;
   width: 15em;
@@ -390,6 +380,11 @@
   
   .container-text-complete {
     width: 9em;
+  }
+
+  .main-first-text-complete {
+    padding-left: .7em;
+    font-size: smaller;
   }
   
   .main-square-two {

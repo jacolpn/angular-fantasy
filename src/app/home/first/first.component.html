@@ -31,25 +31,17 @@
               <p>1</p>
 
               <input
-                *ngIf="
-                  removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(hello)
-                  && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(helloTwo)
-                "
+                *ngIf="removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(hello)"
                 [(ngModel)]="helloVar"
                 placeholder="{{ hello }}"
                 type="text"
               >
 
               <div
-                *ngIf="
-                  removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)
-                  || removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(helloTwo)
-                "
+                *ngIf="removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)"
                 class="container-text-complete"
               >
-                <p class="main-first-text-complete">{{</p>
-                <p class="main-second-text-complete">Olá Mundo</p>
-                <p class="main-third-text-complete">}}</p>
+                <p class="main-first-text-complete">{{ hello }}</p>
               </div>
             </div>
           </div>
@@ -62,11 +54,7 @@
 
             <div class="main-ballon">
               <p 
-                *ngIf="
-                  helloVar.length > 0 
-                  && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(hello)
-                  && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(helloTwo)
-                "
+                *ngIf="helloVar.length > 0 && removeSpaceAndUpperCase(helloVar) != removeSpaceAndUpperCase(hello)"
                 class="main-animation-loading"
               >
                 <span class="first-dot">.</span>
@@ -75,10 +63,7 @@
               </p>
 
               <p
-                *ngIf="
-                  removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)
-                  || removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(helloTwo)
-                "
+                *ngIf="removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)"
                 class="main-ballon-text"
               >
                 Olá Mundo!
@@ -103,10 +88,7 @@
 
   <img
     class="main-confetti"
-    *ngIf="
-      removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)
-      || removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(helloTwo)
-    "
+    *ngIf="removeSpaceAndUpperCase(helloVar) == removeSpaceAndUpperCase(hello)"
     src="../../../assets/gifs/confetti-3.gif"
   >
 </section>

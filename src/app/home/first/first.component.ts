@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-  hello = '{{ Olá Mundo }}';
-  helloTwo = '{{ Ola Mundo }}';
+  hello = '{{ interpolation }}';
   helloVar: string = '';
 
   constructor() { }

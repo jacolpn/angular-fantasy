@@ -164,9 +164,7 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="status-level">
     <div class="text-container-help">
       <div [class]="openModal == false ? 'text-help-animation' : ''"></div>
   
@@ -210,6 +208,51 @@
       </div>
     </div>
 
+    <div class="text-container-help">
+      <div [class]="openModal == false ? 'text-help-animation' : ''"></div>
+  
+      <div [class]="openModal == false ? 'text-help' : 'text-help-open'">
+        <div [class]="openModal == false ? 'text-container-arrow' : 'text-container-arrow-up'" (click)="openHelp()">
+          <img
+            src="../../../assets/images/arrow-up.png"
+            [class]="openModal == false ?  'arrow' : 'arrow-down'"
+            width="24"
+            height="24"
+          >
+
+          <p class="down-description-modal" *ngIf="!openModal">Descrição</p>
+          <p class="down-text-modal" *ngIf="openModal">Minimizar</p>
+        </div>
+  
+        <div class="text-contents-modal" *ngIf="openModal">
+          <div class="text-modal-help">
+            <h3>Interpolation:</h3>
+            <br>
+
+            <p>
+              A interpolação de texto permite incorporar valores de string dinâmicos 
+              em seus modelos HTML. Use a interpolação para alterar dinamicamente o que 
+              aparece em uma visualização do aplicativo, como a exibição de uma saudação
+              personalizada que inclui um "Olá Mundo".
+            </p>
+            
+            <br>
+            <i>
+              <b>Ex:</b>
+              Declare uma variavel com o nome "texto" e utilize a 
+              interpolação escrevendo "{{ textCorrectHtml }}" no html.
+            </i>
+          </div>
+
+          <div class="gif-modal-help">
+            <img class="modal-gif-img" src="../../../../assets/gifs/solution-002.gif">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-level">
     <div [routerLink]="['/games/introduction']" class="status-level-one">1 - Interpolation</div>
     <div [routerLink]="['/games/introduction/second']" class="status-level-two">2 - Property Binding</div>
     <div [routerLink]="['/games/introduction/third']" class="status-level-three">3 - Class Binding</div>

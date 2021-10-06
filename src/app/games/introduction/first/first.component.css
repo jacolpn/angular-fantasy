@@ -4,22 +4,9 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: -5.2em;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.274);
-  z-index: 20;
-  animation: modal-next 1s ease-in-out forwards;
-}
-
-.wrapper-modal-next-close {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-top: -5.2em;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.274);
+  margin-top: -4.2em;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.674);
   z-index: 20;
   animation: modal-next 1s ease-in-out forwards;
 }
@@ -594,8 +581,21 @@ input {
 }
 
 @media only screen and (max-width: 750px) {
+  .wrapper-modal-next {
+    height: 100%;
+    margin-top: -4.3em;
+    position: fixed;
+  }
+  
+  .modal-next {
+    max-width: 60%;
+    position: fixed;
+  }
+  
   section {
-    min-height: 100%;
+    min-height: 90%;
+    margin-top: 2em;
+    align-items: flex-start;
   }
 
   .text-modal-next {
@@ -611,6 +611,7 @@ input {
     max-width: 85%;
     min-width: 85%;
     bottom: 2.8em;
+    position: fixed;
   }
 
   .text-modal-help {
@@ -657,6 +658,8 @@ input {
   .status-level {
     height: 2.8em;
     text-align: center;
+    position: fixed;
+    z-index: 10;
   }
 
   .status-level-one {
@@ -702,10 +705,5 @@ input {
 
   .text-container-open {
     display: grid;
-  }
-  
-  .status-level {
-    position: fixed;
-    z-index: 10;
   }
 }
