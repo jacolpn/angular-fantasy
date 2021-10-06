@@ -299,6 +299,7 @@ input {
   animation: opacity-arrow-down 1.6s 1s ease-in-out backwards;
   color: var(--color-grey);
   display: grid;
+  padding-right: .3em;
   overflow: auto;
 }
 
@@ -311,6 +312,7 @@ input {
 .gif-modal-help {
   width: 100%;
   display: flex;
+  margin-top: 1em;
   justify-content: center;
   align-items: center;
   -webkit-touch-callout: none;  
@@ -612,6 +614,10 @@ input {
     min-width: 85%;
     bottom: 2.8em;
     position: fixed;
+  }
+
+  .text-contents-modal {
+    padding-right: 0;
   }
 
   .text-modal-help {

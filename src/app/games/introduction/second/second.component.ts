@@ -9,23 +9,25 @@ export class SecondComponent implements OnInit {
   openModal: boolean = false;
   modaldialog: boolean = false;
   firstLine: string = "export class IntroductionComponent implements OnInit {";
-  textInput: string = "";
   thirdLine: string = "constructor() { }";
   fourthLine: string = "ngOnInit(): void { }";
   fifthLine: string = "}";
-  textCorrect: string = "texto";
 
   firstLineHtml: string = "<section>";
-  thirdLineHtml: string = "</section>";
+  secondLineHtml: string = "{{ texto }}";
+  fourthLineHtml: string ="<input";
+  fifthLineHtml: string = "</section>";
   textInputHtml: string = "";
-  textCorrectHtml: string = "{{ texto }}";
+  textCorrectHtml: string = "[placeholder]=\"texto\"";
+
+  textHelp: string = "<input [placeholder]=\"texto\">";
 
   constructor() { }
 
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
+    if (this.textInputHtml == this.textCorrectHtml) {
       this.modaldialog = !this.modaldialog;
     }
   }
@@ -35,7 +37,7 @@ export class SecondComponent implements OnInit {
   }
 
   conclude() {
-    if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
+    if (this.textInputHtml == this.textCorrectHtml) {
       this.modaldialog = !this.modaldialog;
     }
   }

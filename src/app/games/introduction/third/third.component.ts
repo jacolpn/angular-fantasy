@@ -8,18 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class ThirdComponent implements OnInit {
   openModal: boolean = false;
   modaldialog: boolean = false;
-  textInput: string = "";
-  textCorrect: string = "texto";
+  firstLine: string = "export class IntroductionComponent implements OnInit {";
+  thirdLine: string = "constructor() { }";
+  fourthLine: string = "ngOnInit(): void { }";
+  fifthLine: string = "}";
 
+  firstLineHtml: string = "<section>";
+  secondLineHtml: string = "{{ texto }}";
+  thirdLineHtml: string = "<input [placeholder]=\"texto\">";
+  fourthLineHtml: string ="<input";
+  fifthLineHtml: string = "</section>";
   textInputHtml: string = "";
-  textCorrectHtml: string = "{{ texto }}";
+  textCorrectHtml: string = "[placeholder]=\"texto\"";
+
 
   constructor() { }
 
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
+    if (this.textInputHtml == this.textCorrectHtml) {
       this.modaldialog = !this.modaldialog;
     }
   }
@@ -29,7 +37,7 @@ export class ThirdComponent implements OnInit {
   }
 
   conclude() {
-    if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
+    if (this.textInputHtml == this.textCorrectHtml) {
       this.modaldialog = !this.modaldialog;
     }
   }
