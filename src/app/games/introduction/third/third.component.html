@@ -1,6 +1,6 @@
 <div
   class="wrapper-modal-next"
-  *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+  *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
 >
   <div class="modal-next">
     <h2>Parabéns!!</h2>
@@ -28,78 +28,142 @@
 
           <div class="line-container">
             <p class="line-number">1</p>
-            <p>{{ firstLine }}</p>
+            <p>{{ oneLineTS }}</p>
           </div>
           <div class="line-container">
             <p class="line-number">2</p>
-            <p class="line-one-space-left">texto: string = "Olá Mundo";</p>
+            <p class="line-one-space-left">{{ twoLineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">3</p>
+            <p>{{ threeLineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">4</p>
-            <p class="line-one-space-left">{{ thirdLine }}</p>
+            <p class="line-one-space-left">{{ fourLineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">5</p>
+            <p>{{ fiveLineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">6</p>
-            <p class="line-one-space-left">{{ fourthLine }}</p>
+            <p class="line-one-space-left">{{ sixLineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">7</p>
-            <p >{{ fifthLine }}</p>
+            <p>{{ sevenLineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">8</p>
+            <p>{{ eightLineTS }}</p>
           </div>
         </div>
 
-        <div class="text-square">
-          <div class="text-title-container">
-            <div class="text-dot-container">
-              <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-              <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-              <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
+        <div>
+          <div class="text-square">
+            <div class="text-title-container">
+              <div class="text-dot-container">
+                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
+                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
+                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
+              </div>
+  
+              <p>app.component.html</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">1</p>
+              <p>{{ oneLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">2</p>
+              <p class="line-one-space-left">{{ twoLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">3</p>
+              <p>{{ threeLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p class="line-one-space-left">{{ fourLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">5</p>
+              <p class="line-two-space-left">{{ fiveLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">6</p>
+              <div class="line-two-space-left">
+                <p *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)">
+                  <input class="input-width" [(ngModel)]="textInputHTML" type="text" (focusout)="conclude()">
+
+                  {{ sixLineHTML }}
+                </p>
+
+                <p *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)">
+                  {{ sixCorrectLineHTML }}
+                </p>
+              </div>
             </div>
 
-            <p>app.component.html</p>
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p class="line-one-space-left">{{ sevenLineHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p>{{ nineLineHTML }}</p>
+            </div>
+            
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p>{{ tenLineHTML }}</p>
+            </div>
           </div>
 
-          <div class="line-container">
-            <p class="line-number">1</p>
-            <p>{{ firstLineHtml }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">2</p>
-            <p class="line-one-space-left">{{ secondLineHtml }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">3</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">4</p>
-            <p class="line-one-space-left">{{ thirdLineHtml }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">5</p>
-            <p>{{ fifthLineHtml }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">6</p>
+          <div class="text-square">
+            <div class="text-title-container">
+              <div class="text-dot-container">
+                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
+                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
+                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
+              </div>
+  
+              <p>app.component.css</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">1</p>
+              <p>{{ oneLineCSS }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">2</p>
+              <p class="line-one-space-left">{{ twoLineCSS }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">3</p>
+              <p>{{ threeLineCSS }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p>{{ fourLineCSS }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -119,11 +183,11 @@
             Olá Mundo!
           </p>
 
-          <input [placeholder]="textCorrectHtml">
+          <input [placeholder]="fiveLineHTML" [class.success]="textInputHTML == textCorrectHTML">
 
           <p
             *ngIf="
-              textInputHtml.length > 0 && removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)
+              textInputHTML.length > 0 && removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)
             "
           >
             <span class="first-dot">.</span>
@@ -152,32 +216,23 @@
   
         <div class="text-contents-modal" *ngIf="openModal">
           <div class="text-modal-help">
-            <h3>Property Binding:</h3>
+            <h3>Class Binding:</h3>
             <br>
 
             <p>
-              A vinculação de propriedades no Angular ajuda a definir valores para propriedades de elementos ou diretivas HTML.
-              Use a associação de propriedade para fazer coisas como a funcionalidade do botão de alternância, 
-              definir caminhos programaticamente e compartilhar valores entre os componentes.
+              Para criar a ligação de classe única, use o Prefix class seguida do ponto e o nome da classe CSS - por exemplo,
+              [Class.success]=\"expressão\". O Angular adiciona a classe quando a expressão ligada é verdadeira,
+              e remove a classe quando a expressão é falsa.
             </p>
 
-            <br>
-            <p>
-              Para vincular à propriedade de um elemento, coloque-o entre colchetes, [], 
-              que identifica a propriedade como uma propriedade de destino. 
-              Uma propriedade de destino é a propriedade DOM à qual você deseja atribuir um valor. 
-            </p>
-            
             <br>
             <i>
-              <b>Ex:</b>
-              A propriedade target no código a seguir é a propriedade placeholder do elemento de input:
-              <b>{{ thirdLineHtml }}</b>
+              <b>Ex:</b> {{ sixCorrectLineHTML }}
             </i>
           </div>
 
           <div class="gif-modal-help">
-            <img class="modal-gif-img" src="../../../../assets/gifs/solution-003.gif">
+            <img class="modal-gif-img" src="../../../../assets/gifs/solution-004.gif">
           </div>
         </div>
       </div>
@@ -188,7 +243,7 @@
     <div [routerLink]="['/games/introduction']" class="status-level-one">Interpolation</div>
     <div [routerLink]="['/games/introduction/second']" class="status-level-two">Property Binding</div>
     <div [routerLink]="['/games/introduction/third']" class="status-level-three">Class Binding</div>
-    <div [routerLink]="['/games/introduction/fourth']" class="status-level-four">Style Binding</div>
-    <div [routerLink]="['/games/introduction/fifth']" class="status-level-five">Event Binding</div>
+    <div [routerLink]="['/games/introduction/fourth']" class="status-level-four">Event Binding</div>
+    <div [routerLink]="['/games/introduction/fifth']" class="status-level-five">Two-way Data Binding</div>
   </div>
 </section>

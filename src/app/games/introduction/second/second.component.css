@@ -185,10 +185,6 @@ input {
   margin-right: .2em;
 }
 
-.first-input {
-  width: 2.8em;
-}
-
 .main-ballon-text {
   color: var(--color-grey);
   font-weight: 900;

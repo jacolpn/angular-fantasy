@@ -1,3 +1,7 @@
+.success {
+  border: 2px solid rgba(53, 201, 75);
+}
+
 .wrapper-modal-next {
   display: flex;
   justify-content: center;
@@ -165,6 +169,10 @@ section {
   margin-left: 15px;
 }
 
+.line-two-space-left {
+  margin-left: 30px;
+}
+
 .container-text-complete {
   display: flex;
   align-items: center;
@@ -178,15 +186,11 @@ section {
 
 input {
   height: 1.8em;
+  margin: 0 -.4em 0 0;
 }
 
-.input-level {
-  margin-left: .7em;
-  margin-right: .2em;
-}
-
-.first-input {
-  width: 2.8em;
+.input-width {
+  width: 8em;
 }
 
 .main-ballon-text {
