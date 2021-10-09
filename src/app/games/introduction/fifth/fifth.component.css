@@ -10,9 +10,10 @@
   height: 100%;
   margin-top: -4.2em;
   position: fixed;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.674);
-  z-index: 20;
-  animation: modal-next 1s ease-in-out forwards;
+  z-index: 3;
+  animation: modal-next .6s ease-in-out forwards;
 }
 
 .modal-next {
@@ -23,20 +24,20 @@
   z-index: 21;
   max-width: 30%;
   padding: 1.5em;
-  animation: modal-next-dialog 2s ease-in-out forwards;
+  animation: modal-next-dialog 1s ease-in-out forwards;
 }
 
 .modal-next h2 {
-  animation: modal-next-dialog 2s ease-in-out forwards;
+  animation: modal-next-dialog 1s ease-in-out forwards;
 }
 
 .modal-next p {
-  animation: modal-next-dialog 2s ease-in-out forwards;
+  animation: modal-next-dialog 1s ease-in-out forwards;
   margin-bottom: 1em;
 }
 
 .modal-next button {
-  animation: modal-next-dialog 2s ease-in-out forwards;
+  animation: modal-next-dialog 1s ease-in-out forwards;
 }
 
 @keyframes modal-next {
@@ -52,7 +53,7 @@
   0% {
     opacity: 0;
   }
-  75% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -202,8 +203,24 @@ input {
   z-index: 9;
 }
 
+.secondary-ballon-text {
+  color: var(--color-grey);
+  margin-bottom: .5em;
+  z-index: 9;
+}
+
+.link-ballon-text {
+  color: var(--color-blue-dark);
+  cursor: pointer;
+}
+
+.link-ballon-text:hover {
+  color: var(--color-blue);
+}
+
 .button-phone {
-  margin-top: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .text-container-help {
@@ -217,7 +234,7 @@ input {
   justify-content: center;
   align-items: center;
   background-color: var(--color-white);
-  z-index: 5;
+  z-index: 2;
   animation: opacity-arrow-down 1.6s ease-in-out forwards;
   -webkit-touch-callout: none;
   height:auto;
@@ -344,7 +361,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
   animation: opacity-help-down 1.6s ease-in-out backwards;
 }
 
@@ -378,6 +395,8 @@ input {
   background-color: var(--color-grey-light);
   width: 8em;
   height: 1.3em;
+  position: absolute;
+  margin-top: -.4em;
   border-radius: 0 0 1em 1em;
   display: flex;
   justify-content: center;
@@ -405,6 +424,7 @@ input {
   width: 14em;
   height: 27em;
   margin-top: -1em;
+  word-wrap: break-word;
 }
 
 .first-dot {
@@ -604,7 +624,7 @@ input {
 @media only screen and (max-width: 750px) {
   .wrapper-modal-next {
     height: 100%;
-    margin-top: -4.3em;
+    margin-top: -40.3em;
     position: fixed;
   }
   
@@ -641,6 +661,10 @@ input {
 
   .text-modal-help {
     width: 90%;
+  }
+
+  .text-help-open {
+    height: 15em;
   }
 
   .text-container-arrow {
@@ -731,5 +755,17 @@ input {
 
   .text-container-open {
     display: grid;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .wrapper-modal-next {
+    height: 100%;
+    margin-top: -29.3em;
+    position: fixed;
+  }
+
+  .text-help-open {
+    height: 30em;
   }
 }

@@ -1,35 +1,13 @@
 .wrapper {
-  height: 89%;
+  height: 79%;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container {
-  width: 50%;
-  text-align: justify;
-}
-
-h1 {
-  text-align: left;
-  margin-top: -.7em;
-}
-
-p {
-  margin-top: 1em;
-}
-
-button {
-  margin-top: 3em;
-}
-
 @media only screen and (max-width: 750px) {
   .wrapper {
-    height: 100%;
-  }
-
-  .container {
-    width: 80%;
+    height: 90%;
   }
 }

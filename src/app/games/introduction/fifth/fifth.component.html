@@ -1,18 +1,18 @@
-<div
-  class="wrapper-modal-next"
-  *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
->
-  <div class="modal-next">
-    <h2>Parabéns!!</h2>
-    <p>Conseguimos inserir um placeholder unindo a Interpolação e o Propery Binding.</p>
-    <button [routerLink]="['/games/introduction/fifth']">Próximo desafio</button>
-  </div>
-</div>
-
 <section>
   <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
 
   <div class="wrapper">
+    <div
+      class="wrapper-modal-next"
+      *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+    >
+      <div class="modal-next">
+        <h2>Parabéns!!</h2>
+        <p>Conseguimos adicionar um evento ao botão, utilizando o Event Binding.</p>
+        <button [routerLink]="['/games']">Próximo etapa</button>
+      </div>
+    </div>
+
     <div class="text-wrapper">
       <div [class]="openModal == false ? 'text-container' : 'text-container-open'">
         <div class="text-square">
@@ -230,6 +230,22 @@
           >
             Limpar
           </button>
+
+          <br><br>
+          <p
+            class="secondary-ballon-text"
+            *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+          >
+            Para baixar o projeto, basta copiar ou clicar no link do GitHub abaixo:
+          </p>
+          <a
+            *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+            href="https://github.com/jacolpn/jacolpn.github.io"
+            target="_blank"
+            class="link-ballon-text"
+          >
+            https://github.com/jacolpn/jacolpn.github.io
+          </a>
         </div>
       </div>
     </div>
@@ -252,22 +268,23 @@
   
         <div class="text-contents-modal" *ngIf="openModal">
           <div class="text-modal-help">
-            <h3>Two-way Data Binding:</h3>
+            <h3>Event Binding:</h3>
             <br>
 
             <p>
-              A sintaxe de vinculação bidirecional da Angular é uma combinação de colchetes e pais quadrados, [()].
-              A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos (), a seguinte.
+              Para vincular a um evento, você usa a sintaxe de vinculação de evento Angular.
+              Essa sintaxe consiste em um nome de evento de destino entre parênteses à esquerda de um sinal de igual e uma instrução de modelo entre aspas à direita.
+              No exemplo a seguir, o nome do evento de destino é click e a instrução do template é onClear().
             </p>
 
             <br>
             <i>
-              <b>Ex:</b> {{ sixCorrectLineHTML }}
+              <b>Ex:</b> {{ tenCorrectLineHTML }}
             </i>
           </div>
 
           <div class="gif-modal-help">
-            <img class="modal-gif-img" src="../../../../assets/gifs/solution-004.gif">
+            <img class="modal-gif-img" src="../../../../assets/gifs/solution-006.gif">
           </div>
         </div>
       </div>
@@ -275,7 +292,7 @@
   </div>
 
   <div class="status-level">
-    <div [routerLink]="['/games/introduction']" class="status-level-one">Interpolation</div>
+    <div [routerLink]="['/games/introduction/first']" class="status-level-one">Interpolation</div>
     <div [routerLink]="['/games/introduction/second']" class="status-level-two">Property Binding</div>
     <div [routerLink]="['/games/introduction/third']" class="status-level-three">Class Binding</div>
     <div [routerLink]="['/games/introduction/fourth']" class="status-level-four">Two-way Data Binding</div>

@@ -10,17 +10,14 @@ import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
-import { FinishComponent } from './finish/finish.component';
 
 @NgModule({
   declarations: [
-    IntroductionComponent,
     FirstComponent,
     SecondComponent,
     ThirdComponent,
     FourthComponent,
-    FifthComponent,
-    FinishComponent
+    FifthComponent
   ],
   imports: [
     CommonModule,

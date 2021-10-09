@@ -15,13 +15,15 @@ import { HomeModule } from './home/home.module';
 import { IntroductionModule } from './games/introduction/introduction.module';
 
 import { environment } from '../environments/environment';
+import { IntroductionComponent } from './games/introduction/introduction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    GamesComponent
+    GamesComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,
