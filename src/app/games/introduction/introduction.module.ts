@@ -10,6 +10,7 @@ import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
+import { FinishComponent } from './finish/finish.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FifthComponent } from './fifth/fifth.component';
     SecondComponent,
     ThirdComponent,
     FourthComponent,
-    FifthComponent
+    FifthComponent,
+    FinishComponent
   ],
   imports: [
     CommonModule,

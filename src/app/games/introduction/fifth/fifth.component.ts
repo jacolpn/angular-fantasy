@@ -14,8 +14,11 @@ export class FifthComponent implements OnInit {
   fourLineTS: string = "constructor() { }";
   fiveLineTS: string = "";
   sixLineTS: string = "ngOnInit(): void { }";
-  sevenLineTS: string = "}";
-  eightLineTS: string = "";
+  sevenLineTS: string = "";
+  eightLineTS: string = "onClear() {";
+  nineLineTS: string = "this.texto = \"\";";
+  tenLineTS: string = "}";
+  elevenLineTS: string = "";
 
   oneLineHTML: string = "<section>";
   twoLineHTML: string = "{{ texto }}";
@@ -24,16 +27,17 @@ export class FifthComponent implements OnInit {
   fiveLineHTML: string = "[placeholder]=\"texto\"";
   sixLineHTML: string = "=\"texto == 'Olá Mundo'\"";
   sixCorrectLineHTML: string = "[class.success]=\"texto == 'Olá Mundo'\"";
-  sevenLineHTML: string = "=\"texto\"";
-  sevenCorrectLineHTML: string = "[(ngModel)]=\"texto\"";
+  sevenLineHTML: string = "[(ngModel)]=\"texto\"";
   eightLineHTML: string = ">";
-  nineLineHTML: string = "</section>";
-  tenLineHTML: string = "";
-  // tenLineHTML: string = "<button (click)=\"onClear()\">Limpar</button>";
-  // tenLineHTML: string = "";
+  nineLineHTML: string = "";
+  tenPartyOneLineHTML: string = "<button"
+  tenPartyTwoLineHTML: string = "=\"onClear()\">Limpar</button>";
+  tenCorrectLineHTML: string = "<button (click)=\"onClear()\">Limpar</button>";
+  elevenLineHTML: string = "</section>";
+  twelveLineHTML: string = "";
 
   textInputHTML = "";
-  textCorrectHTML: string = "[(ngModel)]";
+  textCorrectHTML: string = "(click)";
 
   oneLineCSS: string = ".success {";
   twoLineCSS: string = "border: 2px solid rgba(53, 201, 75);";
@@ -66,7 +70,7 @@ export class FifthComponent implements OnInit {
     return value.replace(/\s/g, '').toLocaleUpperCase();
   }
 
-  onClick() {
-    this.textInputHTML = "";
+  onClear() {
+    this.textPhone = "";
   }
 }

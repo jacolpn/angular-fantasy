@@ -62,8 +62,4 @@ export class FourthComponent implements OnInit {
   removeSpaceAndUpperCase(value: string) {
     return value.replace(/\s/g, '').toLocaleUpperCase();
   }
-
-  onClick() {
-    this.textInputHTML = "";
-  }
 }

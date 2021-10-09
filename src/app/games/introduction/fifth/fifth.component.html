@@ -62,7 +62,22 @@
 
           <div class="line-container">
             <p class="line-number">8</p>
-            <p>{{ eightLineTS }}</p>
+            <p class="line-one-space-left">{{ eightLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">9</p>
+            <p class="line-two-space-left">{{ nineLineTS }}</p>
+          </div>
+          
+          <div class="line-container">
+            <p class="line-number">10</p>
+            <p class="line-one-space-left">{{ tenLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">11</p>
+            <p>{{ elevenLineTS }}</p>
           </div>
         </div>
 
@@ -110,10 +125,7 @@
 
             <div class="line-container">
               <p class="line-number">7</p>
-
-              <p class="line-two-space-left">
-                {{ sevenCorrectLineHTML }}
-              </p>
+              <p class="line-two-space-left">{{ sevenLineHTML }}</p>
             </div>
 
             <div class="line-container">
@@ -128,7 +140,29 @@
 
             <div class="line-container">
               <p class="line-number">10</p>
-              <p>{{ tenLineHTML }}</p>
+
+              <p *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)">
+                <span class="line-one-space-left">{{ tenPartyOneLineHTML }}</span>
+                <input class="input-width" [(ngModel)]="textInputHTML" type="text" (focusout)="conclude()">
+                <span class="line-one-space-left">{{ tenPartyTwoLineHTML }}</span>
+              </p>
+
+              <p
+                *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+                class="line-one-space-left"
+              >
+                {{ tenCorrectLineHTML }}
+              </p>
+            </div>
+            
+            <div class="line-container">
+              <p class="line-number">11</p>
+              <p>{{ elevenLineHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">12</p>
+              <p>{{ twelveLineHTML }}</p>
             </div>
           </div>
 
@@ -181,13 +215,21 @@
             {{ textPhone }}
           </p>
 
-          <input
-            [placeholder]="fiveLineHTML"
-            [class.success]="true"
-            [(ngModel)]="textPhone"
-          >
+          <input [placeholder]="fiveLineHTML" [class.success]="true" [(ngModel)]="textPhone">
 
-          <button class="button-phone">Limpar</button>
+          <button
+            class="button-phone"
+            *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
+          >
+            Limpar
+          </button>
+          <button
+            (click)="onClear()"
+            class="button-phone"
+            *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+          >
+            Limpar
+          </button>
         </div>
       </div>
     </div>

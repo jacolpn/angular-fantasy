@@ -179,21 +179,9 @@
         </div>
 
         <div class="phone-contents">
-          <p class="main-ballon-text">
-            Olá Mundo!
-          </p>
+          <p class="main-ballon-text">Olá Mundo!</p>
 
           <input [placeholder]="fiveLineHTML" [class.success]="textInputHTML == textCorrectHTML">
-
-          <p
-            *ngIf="
-              textInputHTML.length > 0 && removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)
-            "
-          >
-            <span class="first-dot">.</span>
-            <span class="second-dot">.</span>
-            <span class="third-dot">.</span>
-          </p>
         </div>
       </div>
     </div>
