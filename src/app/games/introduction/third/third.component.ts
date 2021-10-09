@@ -25,9 +25,8 @@ export class ThirdComponent implements OnInit {
   sixLineHTML: string = "=\"texto == 'Olá Mundo'\"";
   sixCorrectLineHTML: string = "[class.success]=\"texto == 'Olá Mundo'\"";
   sevenLineHTML: string = ">";
-  eightLineHTML: string = "";
-  nineLineHTML: string = "</section>";
-  tenLineHTML: string = "";
+  eightLineHTML: string = "</section>";
+  nineLineHTML: string = "";
 
   textInputHTML: string = "";
   textCorrectHTML: string = "[class.success]";

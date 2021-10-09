@@ -1,14 +1,11 @@
 <div
   class="wrapper-modal-next"
-  *ngIf="
-    removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)
-    && removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)
-  "
+  *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
 >
   <div class="modal-next">
     <h2>Parabéns!!</h2>
-    <p>Conseguimos exibir "Olá mundo" na tela utilizando a interpolação.</p>
-    <button [routerLink]="['/games/introduction/second']">Próximo desafio</button>
+    <p>Conseguimos inserir um placeholder unindo a Interpolação e o Propery Binding.</p>
+    <button [routerLink]="['/games/introduction/fifth']">Próximo desafio</button>
   </div>
 </div>
 
@@ -29,26 +26,142 @@
             <p>app.component.ts</p>
           </div>
 
-          <div class="line-container margin-bottom">
+          <div class="line-container">
             <p class="line-number">1</p>
-            <p>Lorem ipsum Lorem ipsum </p>
+            <p>{{ oneLineTS }}</p>
+          </div>
+          <div class="line-container">
+            <p class="line-number">2</p>
+            <p class="line-one-space-left">{{ twoLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">3</p>
+            <p>{{ threeLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">4</p>
+            <p class="line-one-space-left">{{ fourLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">5</p>
+            <p>{{ fiveLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">6</p>
+            <p class="line-one-space-left">{{ sixLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">7</p>
+            <p>{{ sevenLineTS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">8</p>
+            <p>{{ eightLineTS }}</p>
           </div>
         </div>
 
-        <div class="text-square">
-          <div class="text-title-container">
-            <div class="text-dot-container">
-              <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-              <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-              <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
+        <div>
+          <div class="text-square">
+            <div class="text-title-container">
+              <div class="text-dot-container">
+                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
+                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
+                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
+              </div>
+  
+              <p>app.component.html</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">1</p>
+              <p>{{ oneLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">2</p>
+              <p class="line-one-space-left">{{ twoLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">3</p>
+              <p>{{ threeLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p class="line-one-space-left">{{ fourLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">5</p>
+              <p class="line-two-space-left">{{ fiveLineHTML }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">6</p>
+              <p class="line-two-space-left">{{ sixCorrectLineHTML }}</p>
             </div>
 
-            <p>app.component.html</p>
+            <div class="line-container">
+              <p class="line-number">7</p>
+
+              <p class="line-two-space-left">
+                {{ sevenCorrectLineHTML }}
+              </p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">8</p>
+              <p class="line-one-space-left">{{ eightLineHTML }}</p>
+            </div>
+            
+            <div class="line-container">
+              <p class="line-number">9</p>
+              <p>{{ nineLineHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">10</p>
+              <p>{{ tenLineHTML }}</p>
+            </div>
           </div>
 
-          <div class="line-container margin-bottom">
-            <p class="line-number">1</p>
-            <p>Lorem ipsum Lorem ipsum </p>
+          <div class="text-square">
+            <div class="text-title-container">
+              <div class="text-dot-container">
+                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
+                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
+                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
+              </div>
+  
+              <p>app.component.css</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">1</p>
+              <p>{{ oneLineCSS }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">2</p>
+              <p class="line-one-space-left">{{ twoLineCSS }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">3</p>
+              <p>{{ threeLineCSS }}</p>
+            </div>
+  
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p>{{ fourLineCSS }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -64,35 +177,21 @@
         </div>
 
         <div class="phone-contents">
-          <p
-            *ngIf="
-              (textInputHtml.length > 0 && removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml))
-              || (textInput.length > 0 && removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect))
-            "
-          >
-            <span class="first-dot">.</span>
-            <span class="second-dot">.</span>
-            <span class="third-dot">.</span>
+          <p class="main-ballon-text">
+            {{ textPhone }}
           </p>
 
-          <p class="main-ballon-text">
-            Olá Mundo!
-          </p>
-          <p 
-            *ngIf="
-              (removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml))
-              && (removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect))
-            "
-            class="main-ballon-text"
+          <input
+            [placeholder]="fiveLineHTML"
+            [class.success]="true"
+            [(ngModel)]="textPhone"
           >
-            Olá Mundo!
-          </p>
+
+          <button class="button-phone">Limpar</button>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="status-level">
     <div class="text-container-help">
       <div [class]="openModal == false ? 'text-help-animation' : ''"></div>
   
@@ -111,34 +210,33 @@
   
         <div class="text-contents-modal" *ngIf="openModal">
           <div class="text-modal-help">
-            <h3>Lorem ipsum Lorem ipsum:</h3>
+            <h3>Two-way Data Binding:</h3>
             <br>
 
             <p>
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              A sintaxe de vinculação bidirecional da Angular é uma combinação de colchetes e pais quadrados, [()].
+              A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos (), a seguinte.
             </p>
-            
+
             <br>
             <i>
-              <b>Ex:</b>
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              <b>Ex:</b> {{ sixCorrectLineHTML }}
             </i>
           </div>
 
           <div class="gif-modal-help">
-            <img class="modal-gif-img" src="">
+            <img class="modal-gif-img" src="../../../../assets/gifs/solution-004.gif">
           </div>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="status-level">
     <div [routerLink]="['/games/introduction']" class="status-level-one">Interpolation</div>
     <div [routerLink]="['/games/introduction/second']" class="status-level-two">Property Binding</div>
     <div [routerLink]="['/games/introduction/third']" class="status-level-three">Class Binding</div>
-    <div [routerLink]="['/games/introduction/fourth']" class="status-level-four">Event Binding</div>
-    <div [routerLink]="['/games/introduction/fifth']" class="status-level-five">Two-way Data Binding</div>
+    <div [routerLink]="['/games/introduction/fourth']" class="status-level-four">Two-way Data Binding</div>
+    <div [routerLink]="['/games/introduction/fifth']" class="status-level-five">Event Binding</div>
   </div>
 </section>
