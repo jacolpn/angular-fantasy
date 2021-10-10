@@ -1,14 +1,17 @@
 <div class="wrapper">
-  <div *ngFor="let level of levels" class="status-level">
+  <div *ngFor="let stage of levels" class="status-level">
     <div
-      routerLink="{{ level.route }}"
+      routerLink="{{ stage.route }}"
       routerLinkActive="status-level-active"
       class="level"
-      [style.backgroundColor]="access[level.nameAccess] ? 'var(--color-blue)' : 'var(--color-grey-light)'"
-      [style.cursor]="access[level.nameAccess] ? 'pointer' : 'initial'"
-      [style.pointerEvents]="access[level.nameAccess] ? 'all' : 'none'"
+      [style.backgroundColor]="
+        access[stage.nameAccess] 
+          ? (stage.id < level ? 'var(--color-blue-dark)' : 'var(--color-blue)')
+          : 'var(--color-grey-light)'"
+      [style.cursor]="access[stage.nameAccess] ? 'pointer' : 'initial'"
+      [style.pointerEvents]="access[stage.nameAccess] ? 'all' : 'none'"
     >
-      {{ level.name }}
+      {{ stage.name }}
     </div>
   </div>
 </div>

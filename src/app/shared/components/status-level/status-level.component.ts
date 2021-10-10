@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import * as data from '../../../../assets/bd.json';
 
@@ -8,6 +8,8 @@ import * as data from '../../../../assets/bd.json';
   styleUrls: ['./status-level.component.css']
 })
 export class StatusLevelComponent implements OnInit {
+  @Input() level: any = '';
+
   bd = data;
   levels = this.bd.levels;
 
@@ -16,7 +18,7 @@ export class StatusLevelComponent implements OnInit {
     "introductionSecond": true,
     "introductionThird": true,
     "introductionFourth": true,
-    "introductionFifth": true
+    "introductionFifth": false
   }
 
   constructor() { }
