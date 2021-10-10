@@ -1,0 +1,34 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "Interpolation",
+      "route": "/games/introduction/first",
+      "nameAccess": "introductionFirst"
+    },
+    {
+      "id": 2,
+      "name": "Property Binding",
+      "route": "/games/introduction/second",
+      "nameAccess": "introductionSecond"
+    },
+    {
+      "id": 3,
+      "name": "Class Binding",
+      "route": "/games/introduction/third",
+      "nameAccess": "introductionThird"
+    },
+    {
+      "id": 4,
+      "name": "Two-way Data Binding",
+      "route": "/games/introduction/fourth",
+      "nameAccess": "introductionFourth"
+    },
+    {
+      "id": 5,
+      "name": "Event Binding",
+      "route": "/games/introduction/fifth",
+      "nameAccess": "introductionFifth"
+    }
+  ]
+}

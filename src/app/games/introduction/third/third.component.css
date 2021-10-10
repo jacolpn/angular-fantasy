@@ -432,87 +432,6 @@ input {
   }
 }
 
-.status-level {
-  height: .9em;
-  width: 100%;
-  background-color: var(--color-grey-light);
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-touch-callout: none;
-}
-
-.status-level-one {
-  width: 20%;
-  background-color: var(--color-blue);
-  border-right: 1px solid var(--color-grey-light);
-  z-index: 2;
-  font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.status-level-two {
-  width: 20%;
-  z-index: 2;
-  font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 600;
-  background-color: var(--color-blue);
-  border-right: 1px solid var(--color-grey-light);
-}
-
-.status-level-three {
-  width: 20%;
-  z-index: 2;
-  font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 600;
-  background-color: var(--color-blue);
-  border-right: 1px solid var(--color-grey-light);
-}
-
-.status-level-four {
-  width: 20%;
-  z-index: 2;
-  font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 600;
-  border-right: 1px solid var(--color-grey-light);
-}
-
-.status-level-five {
-  width: 20%;
-  z-index: 2;
-  font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 600;
-  border-right: 1px solid var(--color-grey-light);
-}
-
 @keyframes loop-help {
   0% {
     height: 3.8em;
@@ -675,38 +594,6 @@ input {
     max-height: 150px;
     max-width: 300px;
     margin-right: 12px;
-  }
-
-  .status-level {
-    height: 2.8em;
-    text-align: center;
-    position: fixed;
-    z-index: 10;
-  }
-
-  .status-level-one {
-    height: 3.4em;
-    width: 24%;
-  }
-  
-  .status-level-two {
-    height: 3.4em;
-    width: 19%;
-  }
-  
-  .status-level-three {
-    height: 3.4em;
-    width: 19%;
-  }
-  
-  .status-level-four {
-    height: 3.4em;
-    width: 19%;
-  }
-  
-  .status-level-five {
-    height: 3.4em;
-    width: 19%;
   }
 
   .text-square {

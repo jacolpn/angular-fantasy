@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div *ngFor="let level of levels" class="status-level">
+    <div
+      routerLink="{{ level.route }}"
+      routerLinkActive="status-level-active"
+      class="ex"
+      [style.backgroundColor]="access[level.nameAccess] ? 'var(--color-blue)' : 'var(--color-grey-light)'"
+      [style.cursor]="access[level.nameAccess] ? 'pointer' : 'initial'"
+      [style.pointerEvents]="access[level.nameAccess] ? 'all' : 'none'"
+    >
+      {{ level.name }}
+    </div>
+  </div>
+</div>

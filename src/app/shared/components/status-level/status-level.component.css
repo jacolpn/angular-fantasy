@@ -1,0 +1,30 @@
+.wrapper {
+  height: .9em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--color-grey-light);
+  -webkit-touch-callout: none;
+}
+
+.status-level {
+  width: 20%;
+  border-right: 1px solid var(--color-grey-light);
+  z-index: 10;
+  width: 100%;
+  z-index: 10;
+  font-size: smaller;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  display: block;
+  pointer-events: none;
+}
+
+.status-level-active {
+  background-color: var(--color-blue-dark) !important;
+}

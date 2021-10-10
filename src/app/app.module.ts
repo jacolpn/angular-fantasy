@@ -15,7 +15,7 @@ import { HomeModule } from './home/home.module';
 import { IntroductionModule } from './games/introduction/introduction.module';
 
 import { environment } from '../environments/environment';
-import { IntroductionComponent } from './games/introduction/introduction.component';
+import { ComponentsModule } from './shared/components/components.module';
 
 @NgModule({
   declarations: [
@@ -23,13 +23,13 @@ import { IntroductionComponent } from './games/introduction/introduction.compone
     FooterComponent,
     HeaderComponent,
     GamesComponent,
-    IntroductionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HomeModule,
+    ComponentsModule,
     IntroductionModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
