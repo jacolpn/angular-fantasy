@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent implements OnInit {
-  openModal: boolean = false;
+  openHelp: boolean = false;
   modaldialog: boolean = false;
   firstLine: string = "export class IntroductionComponent implements OnInit {";
   thirdLine: string = "constructor() { }";
@@ -30,10 +30,6 @@ export class SecondComponent implements OnInit {
     if (this.textInputHtml == this.textCorrectHtml) {
       this.modaldialog = !this.modaldialog;
     }
-  }
-
-  openHelp() {
-    this.openModal = !this.openModal;
   }
 
   conclude() {

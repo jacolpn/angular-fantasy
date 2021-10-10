@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fourth.component.css']
 })
 export class FourthComponent implements OnInit {
-  openModal: boolean = false;
+  openHelp: boolean = false;
   modaldialog: boolean = false;
   oneLineTS: string = "export class IntroductionComponent implements OnInit {";
   twoLineTS: string = "texto: string = \"Olá Mundo\";";
@@ -47,10 +47,6 @@ export class FourthComponent implements OnInit {
     if (this.textInputHTML == this.textCorrectHTML) {
       this.modaldialog = !this.modaldialog;
     }
-  }
-
-  openHelp() {
-    this.openModal = !this.openModal;
   }
 
   conclude() {

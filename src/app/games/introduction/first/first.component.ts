@@ -6,7 +6,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit, AfterViewInit {
-  openModal: boolean = false;
+  openHelp: boolean = false;
   modaldialog: boolean = false;
   firstLine: string = "export class IntroductionComponent implements OnInit {";
   textInput: string = "";
@@ -28,10 +28,6 @@ export class FirstComponent implements OnInit, AfterViewInit {
     if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
       this.modaldialog = !this.modaldialog;
     }
-  }
-
-  openHelp() {
-    this.openModal = !this.openModal;
   }
 
   conclude() {

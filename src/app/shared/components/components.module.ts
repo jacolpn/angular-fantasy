@@ -5,13 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { StatusLevelComponent } from './status-level/status-level.component';
 import { routes } from 'src/app/app-routing.module';
+import { BoxHelpComponent } from './box-help/box-help.component';
 
 @NgModule({
   declarations: [
-    StatusLevelComponent
+    StatusLevelComponent,
+    BoxHelpComponent
   ],
   exports: [
-    StatusLevelComponent
+    StatusLevelComponent,
+    BoxHelpComponent
   ],
   imports: [
     CommonModule,

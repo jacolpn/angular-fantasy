@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="text-container-help">
+    <div [class]="openModal == false ? 'text-help-animation' : ''"></div>
+
+    <div [class]="openModal == false ? 'text-help' : 'text-help-open'">
+      <div [class]="openModal == false ? 'text-container-arrow' : 'text-container-arrow-up'" (click)="openHelp()">
+        <img
+          src="../../../assets/images/arrow-up.png"
+          [class]="openModal == false ?  'arrow' : 'arrow-down'"
+          width="24"
+          height="24"
+        >
+
+        <p class="down-description-modal" *ngIf="!openModal">Descrição</p>
+        <p class="down-text-modal" *ngIf="openModal">Minimizar</p>
+      </div>
+
+      <div class="text-contents-modal" *ngIf="openModal">
+        <div class="text-modal-help">
+          <h3>{{ bdHelpTwo[level]?.title }}</h3>
+
+          <p class="paragraph" *ngFor="let paragraph of bdHelpTwo[level]?.paragraph">
+            {{ paragraph?.text }}
+          </p>          
+
+          <i>{{ bdHelpTwo[level]?.example }}</i>
+        
+          <div class="gif-modal-help">
+            <img class="modal-gif-img" [src]="bdHelpTwo[level]?.gif">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

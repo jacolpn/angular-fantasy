@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fifth.component.css']
 })
 export class FifthComponent implements OnInit {
-  openModal: boolean = false;
+  openHelp: boolean = false;
   modaldialog: boolean = false;
   oneLineTS: string = "export class IntroductionComponent implements OnInit {";
   twoLineTS: string = "texto: string = \"Olá Mundo\";";
@@ -54,10 +54,6 @@ export class FifthComponent implements OnInit {
     if (this.textInputHTML == this.textCorrectHTML) {
       this.modaldialog = !this.modaldialog;
     }
-  }
-
-  openHelp() {
-    this.openModal = !this.openModal;
   }
 
   conclude() {

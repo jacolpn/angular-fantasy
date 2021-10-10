@@ -30,5 +30,81 @@
       "route": "/games/introduction/fifth",
       "nameAccess": "introductionFifth"
     }
-  ]
+  ],
+  "help": {
+    "introduction": [
+      {},
+      {
+          "id": 1,
+          "name": "introductionFirst",
+          "title": "Interpolation:",
+          "paragraph": [
+            {
+              "id": 1,
+              "text": "A interpolação de texto permite incorporar valores de string dinâmicos em seus modelos HTML. Use a interpolação para alterar dinamicamente o que aparece em uma visualização do aplicativo, como a exibição de uma saudação personalizada que inclui um \"Olá Mundo\"."
+            }
+          ],
+          "example": "Ex: Declare uma variavel com o nome \"texto\" e utilize a interpolação escrevendo \"{{ texto }}\" no html.",
+          "gif": "../../../../assets/gifs/solution-002.gif"
+      
+      },
+      {
+          "id": 2,
+          "name": "introductionSecond",
+          "title": "Property Binding:",
+          "paragraph": [
+            {
+              "id": 1,
+              "text": "A vinculação de propriedades no Angular ajuda a definir valores para propriedades de elementos ou diretivas HTML. Use a associação de propriedade para fazer coisas como a funcionalidade do botão de alternância, definir caminhos programaticamente e compartilhar valores entre os componentes."
+            },
+            {
+              "id": 2,
+              "text": "Para vincular à propriedade de um elemento, coloque-o entre colchetes, [], que identifica a propriedade como uma propriedade de destino. Uma propriedade de destino é a propriedade DOM à qual você deseja atribuir um valor."
+            }
+          ],
+          "example": "Ex: A propriedade target no código a seguir é a propriedade placeholder do elemento de input: <input [placeholder]=\"texto\">",
+          "gif": "../../../../assets/gifs/solution-003.gif"
+        },
+        {
+          "id": 3,
+          "name": "introductionThird",
+          "title": "Class Binding:",
+          "paragraph": [
+            {
+              "id": 1,
+              "text": "Para criar a ligação de classe única, use o Prefix class seguida do ponto e o nome da classe CSS - por exemplo, [Class.success]=\"expressão\". O Angular adiciona a classe quando a expressão ligada é verdadeira, e remove a classe quando a expressão é falsa."
+            }
+          ],
+          "example": "Ex: [class.success]=\"texto == 'Olá Mundo'\"",
+          "gif": "../../../../assets/gifs/solution-004.gif"
+        },
+        {
+          "id": 4,
+          "name": "introductionThird",
+          "title": "Two-way Data Binding:",
+          "paragraph": [
+            {
+              "id": 1,
+              "text": "A sintaxe de vinculação bidirecional da Angular é uma combinação de colchetes e pais quadrados, [()]. A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos (), a seguinte."
+            }
+          ],
+          "example": "Ex: [(ngModel)]=\"texto\"",
+          "gif": "../../../../assets/gifs/solution-005.gif"
+        },
+        {
+          "id": 5,
+          "name": "introductionFifth",
+          "title": "Event Binding:",
+          "paragraph": [
+            {
+              "id": 1,
+              "text": "Para vincular a um evento, você usa a sintaxe de vinculação de evento Angular. Essa sintaxe consiste em um nome de evento de destino entre parênteses à esquerda de um sinal de igual e uma instrução de modelo entre aspas à direita. No exemplo a seguir, o nome do evento de destino é click e a instrução do template é onClear()."
+            }
+          ],
+          "example": "Ex: <button (click)=\"onClear()\">Limpar</button>",
+          "gif": "../../../../assets/gifs/solution-006.gif"
+        }
+    ],
+    "medium": []
+  }
 }

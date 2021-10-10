@@ -14,7 +14,7 @@
     </div>
 
     <div class="text-wrapper">
-      <div [class]="openModal == false ? 'text-container' : 'text-container-open'">
+      <div [class]="openHelp == false ? 'text-container' : 'text-container-open'">
         <div class="text-square">
           <div class="text-title-container">
             <div class="text-dot-container">
@@ -201,7 +201,7 @@
       </div>
     </div>
 
-    <div [class]="openModal == false ? 'phone-wrapper' : 'phone-wrapper-open'">
+    <div [class]="openHelp == false ? 'phone-wrapper' : 'phone-wrapper-open'">
       <div class="phone-container">
         <div class="phone-top-container">
           <div class="phone-top">
@@ -249,47 +249,9 @@
         </div>
       </div>
     </div>
-
-    <div class="text-container-help">
-      <div [class]="openModal == false ? 'text-help-animation' : ''"></div>
-  
-      <div [class]="openModal == false ? 'text-help' : 'text-help-open'">
-        <div [class]="openModal == false ? 'text-container-arrow' : 'text-container-arrow-up'" (click)="openHelp()">
-          <img
-            src="../../../assets/images/arrow-up.png"
-            [class]="openModal == false ?  'arrow' : 'arrow-down'"
-            width="24"
-            height="24"
-          >
-
-          <p class="down-description-modal" *ngIf="!openModal">Descrição</p>
-          <p class="down-text-modal" *ngIf="openModal">Minimizar</p>
-        </div>
-  
-        <div class="text-contents-modal" *ngIf="openModal">
-          <div class="text-modal-help">
-            <h3>Event Binding:</h3>
-            <br>
-
-            <p>
-              Para vincular a um evento, você usa a sintaxe de vinculação de evento Angular.
-              Essa sintaxe consiste em um nome de evento de destino entre parênteses à esquerda de um sinal de igual e uma instrução de modelo entre aspas à direita.
-              No exemplo a seguir, o nome do evento de destino é click e a instrução do template é onClear().
-            </p>
-
-            <br>
-            <i>
-              <b>Ex:</b> {{ tenCorrectLineHTML }}
-            </i>
-          </div>
-
-          <div class="gif-modal-help">
-            <img class="modal-gif-img" src="../../../../assets/gifs/solution-006.gif">
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
+
+<box-help level="5" openModal="openModal" (open)="openHelp = $event"></box-help>
 
 <status-level></status-level>
