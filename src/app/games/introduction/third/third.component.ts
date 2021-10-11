@@ -41,9 +41,9 @@ export class ThirdComponent implements OnInit {
   ngOnInit(): void { }
 
   conclude() {
-    // if (this.textInputHTML == this.textCorrectHTML) {
-    //   this.modaldialog = !this.modaldialog;
-    // }
+    if (this.removeSpaceAndUpperCase(this.textInputHTML) == this.removeSpaceAndUpperCase(this.textCorrectHTML)) {
+      localStorage.setItem('introductionFourth', 'true');
+    }
   }
 
   removeSpaceAndUpperCase(value: string) {

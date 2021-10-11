@@ -13,15 +13,11 @@ export class StatusLevelComponent implements OnInit {
   bd = data;
   levels = this.bd.levels;
 
-  access: any = {
-    "introductionFirst": true,
-    "introductionSecond": true,
-    "introductionThird": true,
-    "introductionFourth": true,
-    "introductionFifth": false
-  }
-
   constructor() { }
 
   ngOnInit(): void { }
+
+  getStorage(value: any) {
+    return localStorage.getItem(value);
+  }
 }

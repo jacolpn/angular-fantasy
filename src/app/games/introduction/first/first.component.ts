@@ -25,10 +25,13 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void { }
 
   conclude() {
-    // if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
-    //   this.modaldialog = !this.modaldialog;
-    // }
-    console.log('chamou conclude()')
+    if (
+      this.removeSpaceAndUpperCase(this.textInput) == this.removeSpaceAndUpperCase(this.textCorrect)
+      && this.removeSpaceAndUpperCase(this.textInputHtml) == this.removeSpaceAndUpperCase(this.textCorrectHtml)
+    ) {
+      localStorage.setItem('introductionFirst', 'true');
+      localStorage.setItem('introductionSecond', 'true');
+    }
   }
 
   removeSpaceAndUpperCase(value: string) {

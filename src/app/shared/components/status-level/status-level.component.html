@@ -5,11 +5,11 @@
       routerLinkActive="status-level-active"
       class="level"
       [style.backgroundColor]="
-        access[stage.nameAccess] 
+        getStorage(stage.nameAccess) 
           ? (stage.id < level ? 'var(--color-blue-dark)' : 'var(--color-blue)')
           : 'var(--color-grey-light)'"
-      [style.cursor]="access[stage.nameAccess] ? 'pointer' : 'initial'"
-      [style.pointerEvents]="access[stage.nameAccess] ? 'all' : 'none'"
+      [style.cursor]="getStorage(stage.nameAccess) ? 'pointer' : 'initial'"
+      [style.pointerEvents]="getStorage(stage.nameAccess) ? 'all' : 'none'"
     >
       {{ stage.name }}
     </div>

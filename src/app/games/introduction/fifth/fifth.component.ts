@@ -50,11 +50,7 @@ export class FifthComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  conclude() {
-    // if (this.textInputHTML == this.textCorrectHTML) {
-    //   this.modaldialog = !this.modaldialog;
-    // }
-  }
+  conclude() { }
 
   removeSpaceAndUpperCase(value: string) {
     return value.replace(/\s/g, '').toLocaleUpperCase();

@@ -27,9 +27,9 @@ export class SecondComponent implements OnInit {
   ngOnInit(): void { }
 
   conclude() {
-    // if (this.textInputHtml == this.textCorrectHtml) {
-    //   this.modaldialog = !this.modaldialog;
-    // }
+    if (this.removeSpaceAndUpperCase(this.textInputHtml) == this.removeSpaceAndUpperCase(this.textCorrectHtml)) {
+      localStorage.setItem('introductionThird', 'true');
+    }
   }
 
   removeSpaceAndUpperCase(value: string) {
