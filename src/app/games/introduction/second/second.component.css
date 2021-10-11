@@ -2,22 +2,29 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 78%;
   overflow: hidden;
+}
+
+section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 1366px;
 }
 
 .scenary {
   position: absolute;
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
+  height: 85%;
   opacity: .2;
   z-index: 0;
 }
 
 .wrapper {
   height: 100%;
-  width: 100%;
+  width: 80%;
   max-width: 1366px;
   display: flex;
   justify-content: center;
@@ -150,6 +157,15 @@ input {
   align-items: center;
   z-index: 2;
   animation: opacity-help-open 1s ease-in-out forwards;
+}
+
+.phone-wrapper-finish {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+  animation: opacity-help-down 1.6s ease-in-out backwards;
 }
 
 .phone-container {
@@ -297,6 +313,10 @@ input {
   }
 
   .phone-wrapper-open {
+    display: none;
+  }
+
+  .phone-wrapper-finish {
     display: none;
   }
 

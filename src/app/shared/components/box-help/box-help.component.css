@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 0;
 }
 
 .text-container-help {
@@ -15,12 +16,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 0;
+  margin-left: 15%;
   background-color: var(--color-white);
   z-index: 5;
   animation: opacity-arrow-down 1.6s ease-in-out forwards;
   -webkit-touch-callout: none;
-  height:auto;
-  overflow:hidden;
+  height: auto;
+  overflow: hidden;
 }
 
 .text-help-animation {
@@ -191,8 +194,9 @@ i {
 
 @media only screen and (max-width: 750px) {
   .text-container-help {
-    max-width: 85%;
-    min-width: 85%;
+    max-width: 90%;
+    min-width: 90%;
+    margin-left: 5%;
     bottom: 2.8em;
     position: fixed;
   }
@@ -207,6 +211,24 @@ i {
 
   .text-help-open {
     height: 15em;
+  }
+
+  @keyframes loop-help-open {
+    0% {
+      height: 3.8em;
+    }
+    100% {
+      height: 15em;
+    }
+  }
+  
+  @keyframes loop-help-down {
+    0% {
+      height: 15em;
+    }
+    100% {
+      height: 3.8em;
+    }
   }
 
   .text-container-arrow {
@@ -250,5 +272,23 @@ i {
 @media only screen and (max-width: 420px) {
   .text-help-open {
     height: 30em;
+  }
+
+  @keyframes loop-help-open {
+    0% {
+      height: 3.8em;
+    }
+    100% {
+      height: 30em;
+    }
+  }
+  
+  @keyframes loop-help-down {
+    0% {
+      height: 30em;
+    }
+    100% {
+      height: 3.8em;
+    }
   }
 }
