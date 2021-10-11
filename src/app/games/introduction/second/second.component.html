@@ -1,6 +1,11 @@
 <section>
   <div>
     <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
+    <img
+      class="main-confetti"
+      *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+      src="../../../assets/gifs/confetti-3.gif"
+    >
 
     <div
       class="container-font"
@@ -13,12 +18,12 @@
       <box-font title="app.component.ts">
         <div class="line-container">
           <p class="line-number">1</p>
-          <p class="big-line">{{ firstLine }}</p>
+          <p class="big-line">{{ codeIntroduction.lineOneTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">2</p>
-          <p class="line-one-space-left">texto: string = "Olá Mundo";</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineTwoTS }}</p>
         </div>
 
         <div class="line-container">
@@ -27,7 +32,7 @@
 
         <div class="line-container">
           <p class="line-number">4</p>
-          <p class="line-one-space-left">{{ thirdLine }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
         </div>
 
         <div class="line-container">
@@ -36,12 +41,12 @@
 
         <div class="line-container">
           <p class="line-number">6</p>
-          <p class="line-one-space-left">{{ fourthLine }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">7</p>
-          <p >{{ fifthLine }}</p>
+          <p >{{ codeIntroduction.lineNineTS }}</p>
         </div>
 
         <div class="line-container">
@@ -52,12 +57,12 @@
       <box-font title="app.component.html">
         <div class="line-container">
           <p class="line-number">1</p>
-          <p>{{ firstLineHtml }}</p>
+          <p>{{ codeIntroduction.lineOneHTML }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">2</p>
-          <p class="line-one-space-left">{{ secondLineHtml }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineTwoHTML }}</p>
         </div>
 
         <div class="line-container">
@@ -67,29 +72,29 @@
         <div class="line-container">
           <p class="line-number">4</p>
           <p class="line-one-space-left line-input">
-            <span>{{ fourthLineHtml }}</span>
+            <span>{{ codeIntroduction.lineThreeHTML }}</span>
 
             <input
-              *ngIf="removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)"
-              [(ngModel)]="textInputHtml"
+              *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
+              [(ngModel)]="textInputHTML"
               class="line-one-space-left input-level"
               type="text"
               (focusout)="conclude()"
             >
 
             <span
-              *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+              *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
               class="text-complete"
             >
-              {{ textCorrectHtml }}
+              {{ textCorrectHTML }}
             </span>
-            <span>{{ fourthTwoLineHtml }}</span>
+            <span>{{ codeIntroduction.lineFourChallengeHTML }}</span>
           </p>
         </div>
 
         <div class="line-container">
           <p class="line-number">5</p>
-          <p>{{ fifthLineHtml }}</p>
+          <p>{{ codeIntroduction.lineNineHTML }}</p>
         </div>
 
         <div class="line-container">
@@ -101,7 +106,7 @@
     <div
       [class]="
         openHelp == false 
-          ? removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml) ? 'phone-wrapper-finish' : 'phone-wrapper'
+          ? removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML) ? 'phone-wrapper-finish' : 'phone-wrapper'
           : 'phone-wrapper-open'
       "
     >
@@ -120,7 +125,7 @@
 
           <p
             *ngIf="
-              textInputHtml.length > 0 && removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)
+              textInputHTML.length > 0 && removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)
             "
           >
             <span class="first-dot">.</span>
@@ -129,9 +134,9 @@
           </p>
 
           <p
-            *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+            *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
           >
-            <input [placeholder]="textCorrectHtml">
+            <input [placeholder]="textCorrectHTML">
           </p>
         </div>
       </div>
@@ -139,7 +144,7 @@
 
     <box-congrats
       level="2"
-      [open]="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+      [open]="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
     >
     </box-congrats>
 

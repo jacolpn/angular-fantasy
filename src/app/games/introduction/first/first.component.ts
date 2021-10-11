@@ -1,27 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as data from '../../../../assets/bd.json';
+
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
+  bd = data;
+  code = this.bd.code;
+  codeIntroduction = this.code.introduction;
+
   openHelp: boolean = false;
-
-  firstLine: string = "export class IntroductionComponent implements OnInit {";
-  secondLine: string = ": string = \"Ola Mundo\";"
-  thirdLine: string = "constructor() { }";
-  fourthLine: string = "ngOnInit(): void { }";
-  fifthLine: string = "}";
-
-  textInput: string = "";
-  textCorrect: string = "texto";
-
-  firstLineHtml: string = "<section>";
-  thirdLineHtml: string = "</section>";
-
-  textInputHtml: string = "";
-  textCorrectHtml: string = "{{ texto }}";
+  textInputTS: string = "";
+  textCorrectTS: string = "texto";
+  textInputHTML: string = "";
+  textCorrectHTML: string = "{{ texto }}";
 
   constructor() { }
 
@@ -29,8 +24,8 @@ export class FirstComponent implements OnInit {
 
   conclude() {
     if (
-      this.removeSpaceAndUpperCase(this.textInput) == this.removeSpaceAndUpperCase(this.textCorrect)
-      && this.removeSpaceAndUpperCase(this.textInputHtml) == this.removeSpaceAndUpperCase(this.textCorrectHtml)
+      this.removeSpaceAndUpperCase(this.textInputTS) == this.removeSpaceAndUpperCase(this.textCorrectTS)
+      && this.removeSpaceAndUpperCase(this.textInputHTML) == this.removeSpaceAndUpperCase(this.textCorrectHTML)
     ) {
       localStorage.setItem('introductionFirst', 'true');
       localStorage.setItem('introductionSecond', 'true');

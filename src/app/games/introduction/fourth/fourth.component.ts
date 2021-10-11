@@ -1,42 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as data from '../../../../assets/bd.json';
+
 @Component({
   selector: 'app-fourth',
   templateUrl: './fourth.component.html',
   styleUrls: ['./fourth.component.css']
 })
 export class FourthComponent implements OnInit {
+  bd = data;
+  code = this.bd.code;
+  codeIntroduction = this.code.introduction;
+
   openHelp: boolean = false;
-
-  oneLineTS: string = "export class IntroductionComponent implements OnInit {";
-  twoLineTS: string = "texto: string = \"Olá Mundo\";";
-  threeLineTS: string = "";
-  fourLineTS: string = "constructor() { }";
-  fiveLineTS: string = "";
-  sixLineTS: string = "ngOnInit(): void { }";
-  sevenLineTS: string = "}";
-  eightLineTS: string = "";
-
-  oneLineHTML: string = "<section>";
-  twoLineHTML: string = "{{ texto }}";
-  threeLineHTML: string = "";
-  fourLineHTML: string ="<input";
-  fiveLineHTML: string = "[placeholder]=\"texto\"";
-  sixLineHTML: string = "[class.success]=\"texto == 'Olá Mundo'\"";
-  sevenLineHTML: string = "=\"texto\"";
-  sevenCorrectLineHTML: string = "[(ngModel)]=\"texto\"";
-  eightLineHTML: string = ">";
-  nineLineHTML: string = "</section>";
-  tenLineHTML: string = "";
-
   textInputHTML = "";
   textCorrectHTML: string = "[(ngModel)]";
-
-  oneLineCSS: string = ".success {";
-  twoLineCSS: string = "border: 2px solid rgba(53, 201, 75);";
-  threeLineCSS: string = "}";
-  fourLineCSS: string = "";
-
   textPhone: string = "Olá Mundo!";
 
   constructor() { }

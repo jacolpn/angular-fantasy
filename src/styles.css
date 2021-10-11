@@ -80,7 +80,7 @@ input {
 }
 
 input::placeholder {
-  color: var(--color-grey-light);
+  color: var(--color-font-white);
   opacity: 0.5;
 }
 

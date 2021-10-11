@@ -1,34 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as data from '../../../../assets/bd.json';
+
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent implements OnInit {
+  bd = data;
+  code = this.bd.code;
+  codeIntroduction = this.code.introduction;
+
   openHelp: boolean = false;
-
-  firstLine: string = "export class IntroductionComponent implements OnInit {";
-  thirdLine: string = "constructor() { }";
-  fourthLine: string = "ngOnInit(): void { }";
-  fifthLine: string = "}";
-
-  firstLineHtml: string = "<section>";
-  secondLineHtml: string = "{{ texto }}";
-  fourthLineHtml: string ="<input";
-  fourthTwoLineHtml: string ="=\"text\">";
-  fifthLineHtml: string = "</section>";
-  textInputHtml: string = "";
-  textCorrectHtml: string = "[placeholder]";
-
-  textHelp: string = "<input [placeholder]=\"texto\">";
+  textInputHTML: string = "";
+  textCorrectHTML: string = "[placeholder]";
 
   constructor() { }
 
   ngOnInit(): void { }
 
   conclude() {
-    if (this.removeSpaceAndUpperCase(this.textInputHtml) == this.removeSpaceAndUpperCase(this.textCorrectHtml)) {
+    if (this.removeSpaceAndUpperCase(this.textInputHTML) == this.removeSpaceAndUpperCase(this.textCorrectHTML)) {
       localStorage.setItem('introductionThird', 'true');
     }
   }

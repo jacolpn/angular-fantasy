@@ -22,6 +22,12 @@ section > div {
   z-index: 0;
 }
 
+.main-confetti {
+  height: 100%;
+  position: absolute;
+  z-index: 7;
+}
+
 .container-font {
   min-height: 60%;
   display: flex;
@@ -41,6 +47,7 @@ section > div {
 
 .line-number {
   margin-right: .9em;
+  width: 1em;
   color: var(--color-grey);
   font-weight: 600;
   z-index: 9;
@@ -51,7 +58,7 @@ section > div {
 }
 
 .line-input {
-  width: 15em;
+  width: 15.5em;
 }
 
 .line-one-space-left {
@@ -236,7 +243,7 @@ input {
 
 @media only screen and (max-width: 750px) {
   section {
-    min-height: 79%;
+    min-height: 86%;
     margin-top: 2em;
     align-items: flex-start;
   }

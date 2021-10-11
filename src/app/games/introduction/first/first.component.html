@@ -1,6 +1,14 @@
 <section>
   <div>
     <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
+    <img
+      class="main-confetti"
+      *ngIf="
+        removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)
+        && removeSpaceAndUpperCase(textInputTS) == removeSpaceAndUpperCase(textCorrectTS)
+      "
+      src="../../../assets/gifs/confetti-3.gif"
+    >
 
     <div
       class="container-font"
@@ -13,28 +21,28 @@
       <box-font title="app.component.ts">
         <div class="line-container">
           <p class="line-number">1</p>
-          <p class="big-line">{{ firstLine }}</p>
+          <p class="big-line">{{ codeIntroduction.lineOneTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">2</p>
           <p class="line-one-space-left">
             <input
-              [(ngModel)]="textInput"
+              [(ngModel)]="textInputTS"
               class="first-input"
               type="text"
               (focusout)="conclude()"
-              *ngIf="removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect)"
+              *ngIf="removeSpaceAndUpperCase(textInputTS) != removeSpaceAndUpperCase(textCorrectTS)"
             >
 
             <span
-              *ngIf="removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)"
+              *ngIf="textInputTS == textCorrectTS"
               class="text-complete"
             >
-              {{ textCorrect }}
+              {{ textCorrectTS }}
             </span>
             <span>
-              {{ secondLine }}
+              {{ codeIntroduction.lineTwoChallengeTS }}
             </span>
           </p>
         </div>
@@ -45,7 +53,7 @@
 
         <div class="line-container">
           <p class="line-number">4</p>
-          <p class="line-one-space-left">{{ thirdLine }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
         </div>
 
         <div class="line-container">
@@ -54,12 +62,12 @@
 
         <div class="line-container">
           <p class="line-number">6</p>
-          <p class="line-one-space-left">{{ fourthLine }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">7</p>
-          <p >{{ fifthLine }}</p>
+          <p >{{ codeIntroduction.lineNineTS }}</p>
         </div>
 
         <div class="line-container">
@@ -70,32 +78,32 @@
       <box-font title="app.component.html">
         <div class="line-container">
           <p class="line-number">1</p>
-          <p>{{ firstLineHtml }}</p>
+          <p>{{ codeIntroduction.lineOneHTML }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">2</p>
           <p class="line-one-space-left line-input">
             <input
-              *ngIf="removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)"
-              [(ngModel)]="textInputHtml"
+              *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
+              [(ngModel)]="textInputHTML"
               class="second-input"
               type="text"
               (focusout)="conclude()"
             >
 
             <span
-              *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+              *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
               class="text-complete"
             >
-              {{ textCorrectHtml }}
+              {{ codeIntroduction.lineTwoHTML }}
             </span>
           </p>
         </div>
 
         <div class="line-container">
           <p class="line-number">3</p>
-          <p>{{ thirdLineHtml }}</p>
+          <p>{{ codeIntroduction.lineNineHTML }}</p>
         </div>
 
         <div class="line-container">
@@ -108,8 +116,8 @@
       [class]="
         openHelp == false 
           ? (
-            (removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml))
-            && (removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect))
+            removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)
+            && textInputTS == textCorrectTS
           ) ? 'phone-wrapper-finish' : 'phone-wrapper'
           : 'phone-wrapper-open'
       "
@@ -125,8 +133,8 @@
         <div class="phone-contents">
           <p
             *ngIf="
-              (textInputHtml.length > 0 && removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml))
-              || (textInput.length > 0 && removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect))
+              (textInputHTML.length > 0 && removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML))
+              || (textInputTS.length > 0 && removeSpaceAndUpperCase(textInputTS) != removeSpaceAndUpperCase(textCorrectTS))
             "
           >
             <span class="first-dot">.</span>
@@ -136,8 +144,8 @@
 
           <p 
             *ngIf="
-              (removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml))
-              && (removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect))
+              removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)
+              && removeSpaceAndUpperCase(textInputTS) == removeSpaceAndUpperCase(textCorrectTS)
             "
             class="main-ballon-text"
           >
@@ -150,8 +158,8 @@
     <box-congrats
       level="1"
       [open]="
-        removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)
-        && removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)
+        removeSpaceAndUpperCase(textInputTS) == removeSpaceAndUpperCase(textCorrectTS)
+        && removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)
       "
     >
     </box-congrats>

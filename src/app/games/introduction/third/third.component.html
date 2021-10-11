@@ -1,6 +1,11 @@
 <section>
   <div>
     <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
+    <img
+      class="main-confetti"
+      *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+      src="../../../assets/gifs/confetti-3.gif"
+    >
 
     <div
       class="container-font"
@@ -13,41 +18,38 @@
       <box-font title="app.component.ts">
         <div class="line-container">
           <p class="line-number">1</p>
-          <p class="big-line">{{ oneLineTS }}</p>
+          <p class="big-line">{{ codeIntroduction.lineOneTS}}</p>
         </div>
         <div class="line-container">
           <p class="line-number">2</p>
-          <p class="line-one-space-left">{{ twoLineTS }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineTwoTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">3</p>
-          <p>{{ threeLineTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">4</p>
-          <p class="line-one-space-left">{{ fourLineTS }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">5</p>
-          <p>{{ fiveLineTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">6</p>
-          <p class="line-one-space-left">{{ sixLineTS }}</p>
+          <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">7</p>
-          <p>{{ sevenLineTS }}</p>
+          <p>{{ codeIntroduction.lineNineTS }}</p>
         </div>
 
         <div class="line-container">
           <p class="line-number">8</p>
-          <p>{{ eightLineTS }}</p>
         </div>
       </box-font>
 
@@ -55,37 +57,36 @@
         <box-font title="app.component.html">
           <div class="line-container">
             <p class="line-number">1</p>
-            <p>{{ oneLineHTML }}</p>
+            <p>{{ codeIntroduction.lineOneHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">2</p>
-            <p class="line-one-space-left">{{ twoLineHTML }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineTwoHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">3</p>
-            <p>{{ threeLineHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">4</p>
-            <p class="line-one-space-left">{{ fourLineHTML }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineThreeHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">5</p>
-            <p class="line-two-space-left">{{ fiveLineHTML }}</p>
+            <p class="line-two-space-left">{{ codeIntroduction.lineFourHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">6</p>
             <p class="line-two-space-left line-input">
               <input
+                type="text"
                 *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
                 class="level-input"
                 [(ngModel)]="textInputHTML"
-                type="text"
                 (focusout)="conclude()"
               >
 
@@ -96,45 +97,43 @@
                 {{ textCorrectHTML }}
               </span>
 
-              {{ sixLineHTML }}
+              {{ codeIntroduction.lineFiveChallengeHTML }}
             </p>
           </div>
 
           <div class="line-container">
             <p class="line-number">7</p>
-            <p class="line-one-space-left">{{ sevenLineHTML }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineSevenHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">8</p>
-            <p>{{ eightLineHTML }}</p>
+            <p>{{ codeIntroduction.lineNineHTML }}</p>
           </div>
           
           <div class="line-container">
             <p class="line-number">9</p>
-            <p>{{ nineLineHTML }}</p>
           </div>
         </box-font>
 
         <box-font title="app.component.css">
           <div class="line-container">
             <p class="line-number">1</p>
-            <p>{{ oneLineCSS }}</p>
+            <p>{{ codeIntroduction.lineOneCSS}}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">2</p>
-            <p class="line-one-space-left">{{ twoLineCSS }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineTwoCSS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">3</p>
-            <p>{{ threeLineCSS }}</p>
+            <p>{{ codeIntroduction.lineThreeCSS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">4</p>
-            <p>{{ fourLineCSS }}</p>
           </div>
         </box-font>
       </div>
@@ -158,7 +157,7 @@
         <div class="phone-contents">
           <p class="main-ballon-text">Olá Mundo!</p>
 
-          <input [placeholder]="fiveLineHTML" [class.success]="textInputHTML == textCorrectHTML">
+          <input placeholder="Olá Mundo!" [class.success]="textInputHTML == textCorrectHTML">
         </div>
       </div>
     </div>

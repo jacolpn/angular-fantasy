@@ -137,5 +137,39 @@
       }
     ],
     "medium": []
+  },
+  "code": {
+    "introduction": {
+        "id": 1,
+        "lineOneTS": "export class IntroductionComponent implements OnInit {",
+        "lineTwoChallengeTS": ": string = \"Ola Mundo\";",
+        "lineTwoTS": "texto: string = \"Ola Mundo\";",
+        "lineThreeTS": "constructor() { }",
+        "lineFourTS": "ngOnInit(): void { }",
+        "lineFiveTS": "onClear() {",
+        "lineSixTS": "this.texto = \"\";",
+        "lineEightTS": "}",
+        "lineNineTS": "}",
+
+        "lineOneHTML": "<section>",
+        "lineTwoHTML": "{{ texto }}",
+        "lineThreeHTML": "<input",
+        "lineFourChallengeHTML": "=\"texto\">",
+        "lineFourHTML": "[placeholder]=\"texto\"",
+        "lineFiveChallengeHTML": "=\"texto == 'Olá Mundo'\"",
+        "lineFiveHTML": "[class.success]=\"texto == 'Olá Mundo'\"",
+        "lineSixChallengeHTML": "=\"texto\"",
+        "lineSixHTML": "[(ngModel)]=\"texto\"",
+        "lineSevenHTML": ">",
+        "lineEightChallengePartyOneHTML": "<button",
+        "lineEightChallengePartyTwoHTML": "=\"onClear()\">Limpar</button>",
+        "lineEightHTML": "<button (click)=\"onClear()\">Limpar</button>",
+        "lineNineHTML": "</section>",
+
+        "lineOneCSS": ".success {",
+        "lineTwoCSS": "border: 2px solid rgba(53, 201, 75);",
+        "lineThreeCSS": "}"
+      },
+      "medium": {}
   }
 }
