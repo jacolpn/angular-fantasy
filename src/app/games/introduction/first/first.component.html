@@ -2,120 +2,106 @@
   <div>
     <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
 
-    <div class="wrapper">
-      <div class="text-wrapper">
-        <div [class]="openHelp == false ? 'text-container' : 'text-container-open'">
-          <div class="text-square">
-            <div class="text-title-container">
-              <div class="text-dot-container">
-                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
-              </div>
-
-              <p>app.component.ts</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">1</p>
-              <p>{{ firstLine }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">2</p>
-
-              <div *ngIf="removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect)">
-                <input
-                  [(ngModel)]="textInput"
-                  class="line-one-space-left first-input"
-                  type="text"
-                  (focusout)="conclude()"
-                >
-                : string = "Olá Mundo";
-              </div>
-
-              <div
-                *ngIf="removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)"
-                class="container-text-complete line-one-space-left"
-              >
-                <p class="main-first-text-complete">texto: string = "Ola Mundo";</p>
-              </div>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">3</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">4</p>
-              <p class="line-one-space-left">{{ thirdLine }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">5</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">6</p>
-              <p class="line-one-space-left">{{ fourthLine }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">7</p>
-              <p >{{ fifthLine }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">8</p>
-            </div>
-          </div>
-
-          <div class="text-square">
-            <div class="text-title-container">
-              <div class="text-dot-container">
-                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
-              </div>
-
-              <p>app.component.html</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">1</p>
-              <p>{{ firstLineHtml }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">2</p>
-
-              <input
-                *ngIf="removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)"
-                [(ngModel)]="textInputHtml"
-                class="line-one-space-left"
-                type="text"
-                (focusout)="conclude()"
-              >
-
-              <div
-                *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
-                class="container-text-complete line-one-space-left"
-              >
-                <p class="main-first-text-complete">{{ textCorrectHtml }}</p>
-              </div>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">3</p>
-              <p>{{ thirdLineHtml }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">4</p>
-            </div>
-          </div>
+    <div
+      class="container-font"
+      [style.animation]="
+        openHelp == false 
+          ? 'opacity-help-down 1.6s ease-in-out backwards' 
+          : 'opacity-help-open 1s ease-in-out forwards'
+      "
+    >
+      <box-font title="app.component.ts">
+        <div class="line-container">
+          <p class="line-number">1</p>
+          <p class="big-line">{{ firstLine }}</p>
         </div>
-      </div>
+
+        <div class="line-container">
+          <p class="line-number">2</p>
+          <p class="line-one-space-left">
+            <input
+              [(ngModel)]="textInput"
+              class="first-input"
+              type="text"
+              (focusout)="conclude()"
+              *ngIf="removeSpaceAndUpperCase(textInput) != removeSpaceAndUpperCase(textCorrect)"
+            >
+
+            <span
+              *ngIf="removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)"
+              class="text-complete"
+            >
+              {{ textCorrect }}
+            </span>
+            <span>
+              {{ secondLine }}
+            </span>
+          </p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">3</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">4</p>
+          <p class="line-one-space-left">{{ thirdLine }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">5</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">6</p>
+          <p class="line-one-space-left">{{ fourthLine }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">7</p>
+          <p >{{ fifthLine }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">8</p>
+        </div>
+      </box-font>
+
+      <box-font title="app.component.html">
+        <div class="line-container">
+          <p class="line-number">1</p>
+          <p>{{ firstLineHtml }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">2</p>
+          <p class="line-one-space-left line-input">
+            <input
+              *ngIf="removeSpaceAndUpperCase(textInputHtml) != removeSpaceAndUpperCase(textCorrectHtml)"
+              [(ngModel)]="textInputHtml"
+              class="second-input"
+              type="text"
+              (focusout)="conclude()"
+            >
+
+            <span
+              *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+              class="text-complete"
+            >
+              {{ textCorrectHtml }}
+            </span>
+          </p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">3</p>
+          <p>{{ thirdLineHtml }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">4</p>
+        </div>
+      </box-font>
     </div>
 
     <div

@@ -16,9 +16,10 @@ export class SecondComponent implements OnInit {
   firstLineHtml: string = "<section>";
   secondLineHtml: string = "{{ texto }}";
   fourthLineHtml: string ="<input";
+  fourthTwoLineHtml: string ="=\"text\">";
   fifthLineHtml: string = "</section>";
   textInputHtml: string = "";
-  textCorrectHtml: string = "[placeholder]=\"texto\"";
+  textCorrectHtml: string = "[placeholder]";
 
   textHelp: string = "<input [placeholder]=\"texto\">";
 

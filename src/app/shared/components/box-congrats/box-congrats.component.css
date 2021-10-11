@@ -27,16 +27,16 @@
   animation: modal-next-dialog 1s ease-in-out forwards;
 }
 
-.modal-next h2 {
+h2 {
   animation: modal-next-dialog 1s ease-in-out forwards;
 }
 
-.modal-next p {
+p {
   animation: modal-next-dialog 1s ease-in-out forwards;
   margin-bottom: 1em;
 }
 
-.modal-next button {
+button {
   animation: modal-next-dialog 1s ease-in-out forwards;
 }
 

@@ -7,17 +7,20 @@ import { StatusLevelComponent } from './status-level/status-level.component';
 import { routes } from 'src/app/app-routing.module';
 import { BoxHelpComponent } from './box-help/box-help.component';
 import { BoxCongratsComponent } from './box-congrats/box-congrats.component';
+import { BoxFontComponent } from './box-font/box-font.component';
 
 @NgModule({
   declarations: [
     StatusLevelComponent,
     BoxHelpComponent,
-    BoxCongratsComponent
+    BoxCongratsComponent,
+    BoxFontComponent
   ],
   exports: [
     StatusLevelComponent,
     BoxHelpComponent,
-    BoxCongratsComponent
+    BoxCongratsComponent,
+    BoxFontComponent
   ],
   imports: [
     CommonModule,

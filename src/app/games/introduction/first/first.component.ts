@@ -9,14 +9,17 @@ export class FirstComponent implements OnInit {
   openHelp: boolean = false;
 
   firstLine: string = "export class IntroductionComponent implements OnInit {";
-  textInput: string = "";
+  secondLine: string = ": string = \"Ola Mundo\";"
   thirdLine: string = "constructor() { }";
   fourthLine: string = "ngOnInit(): void { }";
   fifthLine: string = "}";
+
+  textInput: string = "";
   textCorrect: string = "texto";
 
   firstLineHtml: string = "<section>";
   thirdLineHtml: string = "</section>";
+
   textInputHtml: string = "";
   textCorrectHtml: string = "{{ texto }}";
 

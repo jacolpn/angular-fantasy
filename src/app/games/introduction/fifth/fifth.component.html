@@ -2,193 +2,174 @@
   <div>
     <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
 
-    <div class="wrapper">
-      <div class="text-wrapper">
-        <div [class]="openHelp == false ? 'text-container' : 'text-container-open'">
-          <div class="text-square">
-            <div class="text-title-container">
-              <div class="text-dot-container">
-                <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-                <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-                <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
-              </div>
-
-              <p>app.component.ts</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">1</p>
-              <p>{{ oneLineTS }}</p>
-            </div>
-            <div class="line-container">
-              <p class="line-number">2</p>
-              <p class="line-one-space-left">{{ twoLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">3</p>
-              <p>{{ threeLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">4</p>
-              <p class="line-one-space-left">{{ fourLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">5</p>
-              <p>{{ fiveLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">6</p>
-              <p class="line-one-space-left">{{ sixLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">7</p>
-              <p>{{ sevenLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">8</p>
-              <p class="line-one-space-left">{{ eightLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">9</p>
-              <p class="line-two-space-left">{{ nineLineTS }}</p>
-            </div>
-            
-            <div class="line-container">
-              <p class="line-number">10</p>
-              <p class="line-one-space-left">{{ tenLineTS }}</p>
-            </div>
-
-            <div class="line-container">
-              <p class="line-number">11</p>
-              <p>{{ elevenLineTS }}</p>
-            </div>
-          </div>
-
-          <div>
-            <div class="text-square">
-              <div class="text-title-container">
-                <div class="text-dot-container">
-                  <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-                  <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-                  <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
-                </div>
-    
-                <p>app.component.html</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">1</p>
-                <p>{{ oneLineHTML }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">2</p>
-                <p class="line-one-space-left">{{ twoLineHTML }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">3</p>
-                <p>{{ threeLineHTML }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">4</p>
-                <p class="line-one-space-left">{{ fourLineHTML }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">5</p>
-                <p class="line-two-space-left">{{ fiveLineHTML }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">6</p>
-                <p class="line-two-space-left">{{ sixCorrectLineHTML }}</p>
-              </div>
-
-              <div class="line-container">
-                <p class="line-number">7</p>
-                <p class="line-two-space-left">{{ sevenLineHTML }}</p>
-              </div>
-
-              <div class="line-container">
-                <p class="line-number">8</p>
-                <p class="line-one-space-left">{{ eightLineHTML }}</p>
-              </div>
-              
-              <div class="line-container">
-                <p class="line-number">9</p>
-                <p>{{ nineLineHTML }}</p>
-              </div>
-
-              <div class="line-container">
-                <p class="line-number">10</p>
-
-                <p *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)">
-                  <span class="line-one-space-left">{{ tenPartyOneLineHTML }}</span>
-                  <input class="input-width" [(ngModel)]="textInputHTML" type="text" (focusout)="conclude()">
-                  <span class="line-one-space-left">{{ tenPartyTwoLineHTML }}</span>
-                </p>
-
-                <p
-                  *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
-                  class="line-one-space-left"
-                >
-                  {{ tenCorrectLineHTML }}
-                </p>
-              </div>
-              
-              <div class="line-container">
-                <p class="line-number">11</p>
-                <p>{{ elevenLineHTML }}</p>
-              </div>
-
-              <div class="line-container">
-                <p class="line-number">12</p>
-                <p>{{ twelveLineHTML }}</p>
-              </div>
-            </div>
-
-            <div class="text-square">
-              <div class="text-title-container">
-                <div class="text-dot-container">
-                  <div class="text-dot" style="background-color: rgba(255, 98, 92);"></div>
-                  <div class="text-dot" style="background-color: rgba(254, 191, 67);"></div>
-                  <div class="text-dot" style="background-color: rgba(53, 201, 75);"></div>
-                </div>
-    
-                <p>app.component.css</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">1</p>
-                <p>{{ oneLineCSS }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">2</p>
-                <p class="line-one-space-left">{{ twoLineCSS }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">3</p>
-                <p>{{ threeLineCSS }}</p>
-              </div>
-    
-              <div class="line-container">
-                <p class="line-number">4</p>
-                <p>{{ fourLineCSS }}</p>
-              </div>
-            </div>
-          </div>
+    <div
+      class="container-font"
+      [style.animation]="
+        openHelp == false 
+          ? 'opacity-help-down 1.6s ease-in-out backwards' 
+          : 'opacity-help-open 1s ease-in-out forwards'
+      "
+    >
+      <box-font title="app.component.ts">
+        <div class="line-container">
+          <p class="line-number">1</p>
+          <p class="big-line">{{ oneLineTS }}</p>
         </div>
+
+        <div class="line-container">
+          <p class="line-number">2</p>
+          <p class="line-one-space-left">{{ twoLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">3</p>
+          <p>{{ threeLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">4</p>
+          <p class="line-one-space-left">{{ fourLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">5</p>
+          <p>{{ fiveLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">6</p>
+          <p class="line-one-space-left">{{ sixLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">7</p>
+          <p>{{ sevenLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">8</p>
+          <p class="line-one-space-left">{{ eightLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">9</p>
+          <p class="line-two-space-left">{{ nineLineTS }}</p>
+        </div>
+        
+        <div class="line-container">
+          <p class="line-number">10</p>
+          <p class="line-one-space-left">{{ tenLineTS }}</p>
+        </div>
+
+        <div class="line-container">
+          <p class="line-number">11</p>
+          <p>{{ elevenLineTS }}</p>
+        </div>
+      </box-font>
+
+      <div>
+        <box-font title="app.component.html">
+          <div class="line-container">
+            <p class="line-number">1</p>
+            <p>{{ oneLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">2</p>
+            <p class="line-one-space-left">{{ twoLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">3</p>
+            <p>{{ threeLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">4</p>
+            <p class="line-one-space-left">{{ fourLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">5</p>
+            <p class="line-two-space-left">{{ fiveLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">6</p>
+            <p class="line-two-space-left">{{ sixCorrectLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">7</p>
+            <p class="line-two-space-left">{{ sevenLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">8</p>
+            <p class="line-one-space-left">{{ eightLineHTML }}</p>
+          </div>
+          
+          <div class="line-container">
+            <p class="line-number">9</p>
+            <p>{{ nineLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">10</p>
+            <p class="line-input">
+              <span class="line-one-space-left">{{ tenPartyOneLineHTML }}</span>
+
+              <input
+                type="text"
+                class="input-width"
+                [(ngModel)]="textInputHTML"
+                (focusout)="conclude()"
+                *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
+              >
+
+              <span
+                *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+                class="line-one-space-left text-complete"
+              >
+                {{ textCorrectHTML }}
+              </span>
+
+              <span class="line-one-space-left">{{ tenPartyTwoLineHTML }}</span>
+            </p>
+          </div>
+          
+          <div class="line-container">
+            <p class="line-number">11</p>
+            <p>{{ elevenLineHTML }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">12</p>
+            <p>{{ twelveLineHTML }}</p>
+          </div>
+        </box-font>
+
+        <box-font title="app.component.css">
+          <div class="line-container">
+            <p class="line-number">1</p>
+            <p>{{ oneLineCSS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">2</p>
+            <p class="line-one-space-left">{{ twoLineCSS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">3</p>
+            <p>{{ threeLineCSS }}</p>
+          </div>
+
+          <div class="line-container">
+            <p class="line-number">4</p>
+            <p>{{ fourLineCSS }}</p>
+          </div>
+        </box-font>
       </div>
     </div>
 
@@ -214,19 +195,21 @@
 
           <input [placeholder]="fiveLineHTML" [class.success]="true" [(ngModel)]="textPhone">
 
-          <button
-            class="button-phone"
-            *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
-          >
-            Limpar
-          </button>
-          <button
-            (click)="onClear()"
-            class="button-phone"
-            *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
-          >
-            Limpar
-          </button>
+          <div class="container-button-phone">
+            <button
+              class="button-phone"
+              *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
+            >
+              Limpar
+            </button>
+            <button
+              (click)="onClear()"
+              class="button-phone"
+              *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+            >
+              Limpar
+            </button>
+          </div>
 
           <br><br>
           <p
