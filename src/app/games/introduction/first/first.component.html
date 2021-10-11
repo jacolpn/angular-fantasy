@@ -1,16 +1,11 @@
-<div
-  class="wrapper-modal-next"
-  *ngIf="
+<box-congrats
+  level="1"
+  [open]="
     removeSpaceAndUpperCase(textInput) == removeSpaceAndUpperCase(textCorrect)
     && removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)
   "
 >
-  <div class="modal-next">
-    <h2>Parabéns!!</h2>
-    <p>Conseguimos exibir "Olá mundo" na tela utilizando a interpolação.</p>
-    <button [routerLink]="['/games/introduction/second']">Próximo desafio</button>
-  </div>
-</div>
+</box-congrats>
 
 <section>
   <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">

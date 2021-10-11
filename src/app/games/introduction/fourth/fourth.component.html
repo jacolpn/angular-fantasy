@@ -1,13 +1,8 @@
-<div
-  class="wrapper-modal-next"
-  *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+<box-congrats
+  level="4"
+  [open]="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
 >
-  <div class="modal-next">
-    <h2>Parabéns!!</h2>
-    <p>Conseguimos inserir alterar a variável 'texto' em tempo real, utilizando o Two-way Data Binding.</p>
-    <button [routerLink]="['/games/introduction/fifth']">Próximo desafio</button>
-  </div>
-</div>
+</box-congrats>
 
 <section>
   <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">

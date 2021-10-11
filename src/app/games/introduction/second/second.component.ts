@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondComponent implements OnInit {
   openHelp: boolean = false;
-  modaldialog: boolean = false;
+
   firstLine: string = "export class IntroductionComponent implements OnInit {";
   thirdLine: string = "constructor() { }";
   fourthLine: string = "ngOnInit(): void { }";
@@ -26,16 +26,10 @@ export class SecondComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  ngAfterViewInit(): void {
-    if (this.textInputHtml == this.textCorrectHtml) {
-      this.modaldialog = !this.modaldialog;
-    }
-  }
-
   conclude() {
-    if (this.textInputHtml == this.textCorrectHtml) {
-      this.modaldialog = !this.modaldialog;
-    }
+    // if (this.textInputHtml == this.textCorrectHtml) {
+    //   this.modaldialog = !this.modaldialog;
+    // }
   }
 
   removeSpaceAndUpperCase(value: string) {

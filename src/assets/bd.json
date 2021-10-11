@@ -106,5 +106,36 @@
         }
     ],
     "medium": []
+  },
+  "congrats": {
+    "introduction": [
+      {},
+      {
+        "title": "Parabéns!!",
+        "paragraph": "Conseguimos exibir \"Olá mundo\" na tela utilizando a interpolação.",
+        "route": "/games/introduction/second"
+      },
+      {
+        "title": "Parabéns!!",
+        "paragraph": "Conseguimos inserir um placeholder unindo a Interpolação e o Propery Binding.",
+        "route": "/games/introduction/third"
+      },
+      {
+        "title": "Parabéns!!",
+        "paragraph": "Conseguimos inserir adicionar uma classe utilizando a Class Binding.",
+        "route": "/games/introduction/fourth"
+      },
+      {
+        "title": "Parabéns!!",
+        "paragraph": "Conseguimos inserir alterar a variável 'texto' em tempo real, utilizando o Two-way Data Binding.",
+        "route": "/games/introduction/fifth"
+      },
+      {
+        "title": "Parabéns!!",
+        "paragraph": "Conseguimos adicionar um evento ao botão, utilizando o Event Binding.",
+        "route": "/games"
+      }
+    ],
+    "medium": []
   }
 }

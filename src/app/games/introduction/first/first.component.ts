@@ -1,13 +1,13 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
   styleUrls: ['./first.component.css']
 })
-export class FirstComponent implements OnInit, AfterViewInit {
+export class FirstComponent implements OnInit {
   openHelp: boolean = false;
-  modaldialog: boolean = false;
+
   firstLine: string = "export class IntroductionComponent implements OnInit {";
   textInput: string = "";
   thirdLine: string = "constructor() { }";
@@ -24,16 +24,11 @@ export class FirstComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void { }
 
-  ngAfterViewInit(): void {
-    if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
-      this.modaldialog = !this.modaldialog;
-    }
-  }
-
   conclude() {
-    if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
-      this.modaldialog = !this.modaldialog;
-    }
+    // if (this.textInput == this.textCorrect && this.textInputHtml == this.textCorrectHtml) {
+    //   this.modaldialog = !this.modaldialog;
+    // }
+    console.log('chamou conclude()')
   }
 
   removeSpaceAndUpperCase(value: string) {

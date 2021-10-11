@@ -6,15 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { StatusLevelComponent } from './status-level/status-level.component';
 import { routes } from 'src/app/app-routing.module';
 import { BoxHelpComponent } from './box-help/box-help.component';
+import { BoxCongratsComponent } from './box-congrats/box-congrats.component';
 
 @NgModule({
   declarations: [
     StatusLevelComponent,
-    BoxHelpComponent
+    BoxHelpComponent,
+    BoxCongratsComponent
   ],
   exports: [
     StatusLevelComponent,
-    BoxHelpComponent
+    BoxHelpComponent,
+    BoxCongratsComponent
   ],
   imports: [
     CommonModule,

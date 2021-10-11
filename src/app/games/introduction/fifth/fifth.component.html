@@ -1,18 +1,13 @@
+<box-congrats
+  level="5"
+  [open]="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+>
+</box-congrats>
+
 <section>
   <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
 
   <div class="wrapper">
-    <div
-      class="wrapper-modal-next"
-      *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
-    >
-      <div class="modal-next">
-        <h2>Parabéns!!</h2>
-        <p>Conseguimos adicionar um evento ao botão, utilizando o Event Binding.</p>
-        <button [routerLink]="['/games']">Próximo etapa</button>
-      </div>
-    </div>
-
     <div class="text-wrapper">
       <div [class]="openHelp == false ? 'text-container' : 'text-container-open'">
         <div class="text-square">

@@ -1,13 +1,8 @@
-<div
-  class="wrapper-modal-next"
-  *ngIf="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
+<box-congrats
+  level="2"
+  [open]="removeSpaceAndUpperCase(textInputHtml) == removeSpaceAndUpperCase(textCorrectHtml)"
 >
-  <div class="modal-next">
-    <h2>Parabéns!!</h2>
-    <p>Conseguimos inserir um placeholder unindo a Interpolação e o Propery Binding.</p>
-    <button [routerLink]="['/games/introduction/third']">Próximo desafio</button>
-  </div>
-</div>
+</box-congrats>
 
 <section>
   <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">

@@ -1,0 +1,13 @@
+<div
+  [class]="open ? 'wrapper-modal-next' : 'close'"
+>
+  <div class="modal-next">
+    <h2>{{ bdCongratsTwo[level]?.title }}</h2>
+
+    <p>{{ bdCongratsTwo[level]?.paragraph }}</p>
+
+    <button routerLink="{{ bdCongratsTwo[level]?.route }}">
+      {{ level != 5 ? 'Próximo desafio' : 'Próxima etapa' }}
+    </button>
+  </div>
+</div>
