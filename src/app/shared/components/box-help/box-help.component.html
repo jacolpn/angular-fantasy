@@ -3,7 +3,7 @@
     <div [class]="openModal == false ? 'text-help-animation' : ''"></div>
 
     <div [class]="openModal == false ? 'text-help' : 'text-help-open'">
-      <div [class]="openModal == false ? 'text-container-arrow' : 'text-container-arrow-up'" (click)="openHelp()">
+      <div class="text-container-arrow" (click)="openHelp()">
         <img
           src="../../../assets/images/arrow-up.png"
           [class]="openModal == false ?  'arrow' : 'arrow-down'"
@@ -26,7 +26,7 @@
           <i>{{ bdHelpTwo[level]?.example }}</i>
         
           <div class="gif-modal-help">
-            <img class="modal-gif-img" [src]="bdHelpTwo[level]?.gif">
+            <img [class]="gif ? 'modal-gif-img-up' : 'modal-gif-img'" [src]="bdHelpTwo[level]?.gif" (click)="openGif()">
           </div>
         </div>
       </div>

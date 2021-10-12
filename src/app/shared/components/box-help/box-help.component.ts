@@ -15,6 +15,7 @@ export class BoxHelpComponent implements OnInit {
   bdHelp: any = this.bd.help;
   bdHelpTwo: any = this.bdHelp.introduction
   openModal: boolean = false;
+  gif: boolean = false;
 
   constructor() { }
 
@@ -23,5 +24,9 @@ export class BoxHelpComponent implements OnInit {
   openHelp() {
     this.openModal = !this.openModal;
     this.open.emit(this.openModal)
+  }
+
+  openGif() {
+    this.gif = !this.gif;
   }
 }

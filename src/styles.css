@@ -3,6 +3,8 @@
   --color-white: #F0F0F7;
   --color-grey-light: #9C98A6;
   --color-grey: #6A6180;
+  --color-black: #303030;
+  --color-black-light: #444;
   --color-blue: #1976d2;
   --color-blue-dark: #0d47a1;
   --color-button-red: rgba(255, 98, 92);
@@ -62,14 +64,18 @@ button {
   background-size: 100% 100%;
   animation: gradient-button 15s ease infinite;
   z-index: 9;
-  color: #fff;
+  color: var(--color-font-white);
+}
+
+button:hover {
+  background: linear-gradient(-45deg, var(--color-black-light), var(--color-blue));
 }
 
 input {
   height: 1.8em;
   width: 12em;
   padding-left: .7em;
-  color: #fff;
+  color: var(--color-font-white);
   font-weight: 600;
   z-index: 9;
   box-shadow: 0 0 0 0;
