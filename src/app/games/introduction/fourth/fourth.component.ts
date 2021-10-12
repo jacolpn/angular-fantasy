@@ -11,6 +11,8 @@ export class FourthComponent implements OnInit {
   bd = data;
   code = this.bd.code;
   codeIntroduction = this.code.introduction;
+  help = this.bd.help;
+  codeIntroductionHelp = this.help.introduction[4];
 
   openHelp: boolean = false;
   textInputHTML = "";

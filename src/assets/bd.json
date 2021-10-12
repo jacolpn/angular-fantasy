@@ -45,8 +45,8 @@
             }
           ],
           "example": "Ex: Declare uma variavel com o nome \"texto\" e utilize a interpolação escrevendo \"{{ texto }}\" no html.",
-          "gif": "../../../../assets/gifs/solution-002.gif"
-      
+          "gif": "../../../../assets/gifs/solution-002.gif",
+          "subtitle": "Para o nosso primeiro desafio, vamos criar uma variável(texto) e inserir no HTML com Interpolação."
       },
       {
           "id": 2,
@@ -59,11 +59,12 @@
             },
             {
               "id": 2,
-              "text": "Para vincular à propriedade de um elemento, coloque-o entre colchetes, [], que identifica a propriedade como uma propriedade de destino. Uma propriedade de destino é a propriedade DOM à qual você deseja atribuir um valor."
+              "text": "Para vincular à propriedade de um elemento, coloque-o entre colchetes[], que identifica a propriedade como uma propriedade de destino. Uma propriedade de destino é a propriedade DOM à qual você deseja atribuir um valor."
             }
           ],
           "example": "Ex: A propriedade target no código a seguir é a propriedade placeholder do elemento de input: <input [placeholder]=\"texto\">",
-          "gif": "../../../../assets/gifs/solution-003.gif"
+          "gif": "../../../../assets/gifs/solution-003.gif",
+          "subtitle": "Vamos inserir um placeholder dinâmicamente utilizando a Property Binding."
         },
         {
           "id": 3,
@@ -76,7 +77,8 @@
             }
           ],
           "example": "Ex: [class.success]=\"texto == 'Olá Mundo'\"",
-          "gif": "../../../../assets/gifs/solution-004.gif"
+          "gif": "../../../../assets/gifs/solution-004.gif",
+          "subtitle": "Vamos inserir uma borda no nosso input por meio da Class Binding."
         },
         {
           "id": 4,
@@ -85,11 +87,12 @@
           "paragraph": [
             {
               "id": 1,
-              "text": "A sintaxe de vinculação bidirecional da Angular é uma combinação de colchetes e pais quadrados, [()]. A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos (), a seguinte."
+              "text": "A sintaxe de vinculação bidirecional da Angular é uma combinação de parênteses e chaves(banana in box), [()]. A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos (). A vinculação bidirecional fornece aos componentes do seu aplicativo uma maneira de compartilhar dados. Use a ligação bidirecional para ouvir eventos e atualizar valores simultaneamente entre os componentes pai e filho."
             }
           ],
           "example": "Ex: [(ngModel)]=\"texto\"",
-          "gif": "../../../../assets/gifs/solution-005.gif"
+          "gif": "../../../../assets/gifs/solution-005.gif",
+          "subtitle": "Vamos alterar o valor da variável \"texto\" ao escrever no input simultaneamente utilizando o Two-Way Data Binding."
         },
         {
           "id": 5,
@@ -102,7 +105,8 @@
             }
           ],
           "example": "Ex: <button (click)=\"onClear()\">Limpar</button>",
-          "gif": "../../../../assets/gifs/solution-006.gif"
+          "gif": "../../../../assets/gifs/solution-006.gif",
+          "subtitle": "Vamos limpar nossa variável \"texto\" utilizando o Event Binding para chamar a função onClear."
         }
     ],
     "medium": []

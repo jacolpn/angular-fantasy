@@ -30,18 +30,29 @@ section > div {
   z-index: 0;
 }
 
-.main-confetti {
+.main-confetti-three {
   height: 100%;
   position: absolute;
-  z-index: 7;
+  z-index: 6;
 }
 
 .container-font {
   min-height: 60%;
+  z-index: 2;
+}
+
+h3 {
+  text-align: center;
+  width: 31em;
+  position: absolute;
+  margin-top: -1.5em;
+}
+
+.container-code {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  margin-top: 2em;
 }
 
 .line-container {
@@ -271,7 +282,13 @@ input {
     display: none;
   }
 
-  .container-font {
+  .container-code {
     display: grid;
+  }
+
+  h3 {
+    width: 90%;
+    margin: 0 0 5% 5%;
+    position: inherit;
   }
 }

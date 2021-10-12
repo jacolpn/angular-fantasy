@@ -2,7 +2,7 @@
   <div>
     <img src="../../../assets/images/first-scenery.png" class="scenary" alt="scenery">
     <img
-      class="main-confetti"
+      class="main-confetti-four"
       *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
       src="../../../assets/gifs/confetti-3.gif"
     >
@@ -10,60 +10,23 @@
     <div
       class="container-font"
       [style.animation]="
-        openHelp == false 
+        openHelp == false
           ? 'opacity-help-down 1.6s ease-in-out backwards' 
           : 'opacity-help-open 1s ease-in-out forwards'
       "
     >
-      <box-font title="app.component.ts">
-        <div class="line-container">
-          <p class="line-number">1</p>
-          <p class="big-line">{{ codeIntroduction.lineOneTS }}</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">2</p>
-          <p class="line-one-space-left">{{ codeIntroduction.lineTwoTS }}</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">3</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">4</p>
-          <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">5</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">6</p>
-          <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">7</p>
-          <p>{{ codeIntroduction.lineNineTS }}</p>
-        </div>
-
-        <div class="line-container">
-          <p class="line-number">8</p>
-        </div>
-      </box-font>
-
-      <div>
-        <box-font title="app.component.html">
+      <h3>{{ codeIntroductionHelp.subtitle }}</h3>
+      
+      <div class="container-code">
+        <box-font title="app.component.ts">
           <div class="line-container">
             <p class="line-number">1</p>
-            <p>{{ codeIntroduction.lineOneHTML }}</p>
+            <p class="big-line">{{ codeIntroduction.lineOneTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">2</p>
-            <p class="line-one-space-left">{{ codeIntroduction.lineTwoHTML }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineTwoTS }}</p>
           </div>
 
           <div class="line-container">
@@ -72,76 +35,117 @@
 
           <div class="line-container">
             <p class="line-number">4</p>
-            <p class="line-one-space-left">{{ codeIntroduction.lineThreeHTML }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">5</p>
-            <p class="line-two-space-left">{{ codeIntroduction.lineFourHTML }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">6</p>
-            <p class="line-two-space-left">{{ codeIntroduction.lineFiveHTML }}</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">7</p>
-            <p class="line-two-space-left line-input">
-              <input
-                type="text"
-                class="input-width"
-                *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
-                [(ngModel)]="textInputHTML"
-                (focusout)="conclude()"
-              >
-
-              <span
-                class="text-complete"
-                *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
-              >
-                {{ textCorrectHTML }}
-              </span>
-
-              {{ codeIntroduction.lineSixChallengeHTML }}
-            </p>
+            <p>{{ codeIntroduction.lineNineTS }}</p>
           </div>
 
           <div class="line-container">
             <p class="line-number">8</p>
-            <p class="line-one-space-left">{{ codeIntroduction.lineSevenHTML }}</p>
-          </div>
-          
-          <div class="line-container">
-            <p class="line-number">9</p>
-            <p>{{ codeIntroduction.lineNineHTML }}</p>
-          </div>
-
-          <div class="line-container">
-            <p class="line-number">10</p>
           </div>
         </box-font>
 
-        <box-font title="app.component.css">
-          <div class="line-container">
-            <p class="line-number">1</p>
-            <p>{{ codeIntroduction.lineOneCSS }}</p>
-          </div>
+        <div>
+          <box-font title="app.component.html">
+            <div class="line-container">
+              <p class="line-number">1</p>
+              <p>{{ codeIntroduction.lineOneHTML }}</p>
+            </div>
 
-          <div class="line-container">
-            <p class="line-number">2</p>
-            <p class="line-one-space-left">{{ codeIntroduction.lineTwoCSS }}</p>
-          </div>
+            <div class="line-container">
+              <p class="line-number">2</p>
+              <p class="line-one-space-left">{{ codeIntroduction.lineTwoHTML }}</p>
+            </div>
 
-          <div class="line-container">
-            <p class="line-number">3</p>
-            <p>{{ codeIntroduction.lineThreeCSS }}</p>
-          </div>
+            <div class="line-container">
+              <p class="line-number">3</p>
+            </div>
 
-          <div class="line-container">
-            <p class="line-number">4</p>
-          </div>
-        </box-font>
+            <div class="line-container">
+              <p class="line-number">4</p>
+              <p class="line-one-space-left">{{ codeIntroduction.lineThreeHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">5</p>
+              <p class="line-two-space-left">{{ codeIntroduction.lineFourHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">6</p>
+              <p class="line-two-space-left">{{ codeIntroduction.lineFiveHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">7</p>
+              <p class="line-two-space-left line-input">
+                <input
+                  type="text"
+                  class="input-width"
+                  *ngIf="removeSpaceAndUpperCase(textInputHTML) != removeSpaceAndUpperCase(textCorrectHTML)"
+                  [(ngModel)]="textInputHTML"
+                  (focusout)="conclude()"
+                >
+
+                <span
+                  class="text-complete"
+                  *ngIf="removeSpaceAndUpperCase(textInputHTML) == removeSpaceAndUpperCase(textCorrectHTML)"
+                >
+                  {{ textCorrectHTML }}
+                </span>
+
+                {{ codeIntroduction.lineSixChallengeHTML }}
+              </p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">8</p>
+              <p class="line-one-space-left">{{ codeIntroduction.lineSevenHTML }}</p>
+            </div>
+            
+            <div class="line-container">
+              <p class="line-number">9</p>
+              <p>{{ codeIntroduction.lineNineHTML }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">10</p>
+            </div>
+          </box-font>
+
+          <box-font title="app.component.css">
+            <div class="line-container">
+              <p class="line-number">1</p>
+              <p>{{ codeIntroduction.lineOneCSS }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">2</p>
+              <p class="line-one-space-left">{{ codeIntroduction.lineTwoCSS }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">3</p>
+              <p>{{ codeIntroduction.lineThreeCSS }}</p>
+            </div>
+
+            <div class="line-container">
+              <p class="line-number">4</p>
+            </div>
+          </box-font>
+        </div>
       </div>
     </div>
 

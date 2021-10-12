@@ -11,6 +11,8 @@ export class FifthComponent implements OnInit {
   bd = data;
   code = this.bd.code;
   codeIntroduction = this.code.introduction;
+  help = this.bd.help;
+  codeIntroductionHelp = this.help.introduction[5];
 
   openHelp: boolean = false;
   textInputHTML = "";

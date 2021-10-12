@@ -19,6 +19,8 @@ section > div {
   align-items: center;
   overflow: hidden;
   max-width: 1366px;
+  overflow: auto;
+  margin-bottom: 3em;
 }
 
 .scenary {
@@ -30,18 +32,29 @@ section > div {
   z-index: 0;
 }
 
-.main-confetti {
+.main-confetti-five {
   height: 100%;
   position: absolute;
-  z-index: 7;
+  z-index: 6;
 }
 
 .container-font {
   min-height: 60%;
+  z-index: 2;
+}
+
+h3 {
+  text-align: center;
+  width: 31em;
+  position: absolute;
+  margin-top: .6em;
+}
+
+.container-code {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  margin-top: 5.8em;
 }
 
 .line-container {
@@ -280,7 +293,14 @@ input {
     display: none;
   }
 
-  .container-font {
+  .container-code {
     display: grid;
+    margin-top: 0;
+  }
+
+  h3 {
+    width: 90%;
+    margin: 0 0 5% 5%;
+    position: inherit;
   }
 }

@@ -18,63 +18,66 @@
           : 'opacity-help-open 1s ease-in-out forwards'
       "
     >
-      <box-font title="app.component.ts">
-        <div class="line-container">
-          <p class="line-number">1</p>
-          <p class="big-line">{{ codeIntroduction.lineOneTS }}</p>
-        </div>
+      <h3>{{ codeIntroductionHelp.subtitle }}</h3>
+    
+      <div class="container-code">
+        <box-font title="app.component.ts">
+          <div class="line-container">
+            <p class="line-number">1</p>
+            <p class="big-line">{{ codeIntroduction.lineOneTS }}</p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">2</p>
-          <p class="line-one-space-left">
-            <input
-              [(ngModel)]="textInputTS"
-              class="first-input"
-              type="text"
-              (focusout)="conclude()"
-              *ngIf="removeSpaceAndUpperCase(textInputTS) != removeSpaceAndUpperCase(textCorrectTS)"
-            >
+          <div class="line-container">
+            <p class="line-number">2</p>
+            <p class="line-one-space-left">
+              <input
+                [(ngModel)]="textInputTS"
+                class="first-input"
+                type="text"
+                (focusout)="conclude()"
+                *ngIf="removeSpaceAndUpperCase(textInputTS) != removeSpaceAndUpperCase(textCorrectTS)"
+              >
 
-            <span
-              *ngIf="textInputTS == textCorrectTS"
-              class="text-complete"
-            >
-              {{ textCorrectTS }}
-            </span>
-            <span>
-              {{ codeIntroduction.lineTwoChallengeTS }}
-            </span>
-          </p>
-        </div>
+              <span
+                *ngIf="textInputTS == textCorrectTS"
+                class="text-complete"
+              >
+                {{ textCorrectTS }}
+              </span>
+              <span>
+                {{ codeIntroduction.lineTwoChallengeTS }}
+              </span>
+            </p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">3</p>
-        </div>
+          <div class="line-container">
+            <p class="line-number">3</p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">4</p>
-          <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
-        </div>
+          <div class="line-container">
+            <p class="line-number">4</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineThreeTS }}</p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">5</p>
-        </div>
+          <div class="line-container">
+            <p class="line-number">5</p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">6</p>
-          <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
-        </div>
+          <div class="line-container">
+            <p class="line-number">6</p>
+            <p class="line-one-space-left">{{ codeIntroduction.lineFourTS }}</p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">7</p>
-          <p >{{ codeIntroduction.lineNineTS }}</p>
-        </div>
+          <div class="line-container">
+            <p class="line-number">7</p>
+            <p >{{ codeIntroduction.lineNineTS }}</p>
+          </div>
 
-        <div class="line-container">
-          <p class="line-number">8</p>
-        </div>
-      </box-font>
-
+          <div class="line-container">
+            <p class="line-number">8</p>
+          </div>
+        </box-font>
+      
       <box-font title="app.component.html">
         <div class="line-container">
           <p class="line-number">1</p>
@@ -110,6 +113,7 @@
           <p class="line-number">4</p>
         </div>
       </box-font>
+      </div>
     </div>
 
     <div

@@ -22,18 +22,28 @@ section > div {
   z-index: 0;
 }
 
-.main-confetti {
+.main-confetti-two {
   height: 100%;
   position: absolute;
-  z-index: 7;
+  z-index: 6;
 }
 
 .container-font {
   min-height: 60%;
+  z-index: 2;
+}
+
+h3 {
+  text-align: center;
+  width: 28em;
+  position: absolute;
+  margin-top: -3.5em;
+}
+
+.container-code {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 
 .line-container {
@@ -243,8 +253,8 @@ input {
 
 @media only screen and (max-width: 750px) {
   section {
-    min-height: 86%;
-    margin-top: 2em;
+    min-height: 100%;
+    margin: 2em 0 6em 0;
     align-items: flex-start;
   }
 
@@ -260,7 +270,13 @@ input {
     display: none;
   }
 
-  .container-font {
+  .container-code {
     display: grid;
+  }
+
+  h3 {
+    width: 90%;
+    margin: 0 0 5% 5%;
+    position: inherit;
   }
 }
