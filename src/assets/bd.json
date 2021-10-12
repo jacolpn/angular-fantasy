@@ -147,7 +147,7 @@
         "id": 1,
         "lineOneTS": "export class IntroductionComponent implements OnInit {",
         "lineTwoChallengeTS": ": string = \"Ola Mundo\";",
-        "lineTwoTS": "texto: string = \"Ola Mundo\";",
+        "lineTwoTS": "texto: string = \"Olá Mundo!\";",
         "lineThreeTS": "constructor() { }",
         "lineFourTS": "ngOnInit(): void { }",
         "lineFiveTS": "onClear() {",

@@ -62,13 +62,14 @@ button {
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 .1em inset;
   background: linear-gradient(-45deg, var(--color-blue-dark), var(--color-blue));
   background-size: 100% 100%;
-  animation: gradient-button 15s ease infinite;
+  animation: gradient 5s ease-in-out infinite;
   z-index: 9;
   color: var(--color-font-white);
 }
 
 button:hover {
   background: linear-gradient(-45deg, var(--color-black-light), var(--color-blue));
+  animation: gradient 5s ease-in-out infinite;
 }
 
 input {
@@ -90,18 +91,6 @@ input::placeholder {
   opacity: 0.5;
 }
 
-@keyframes gradient-button {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -110,7 +99,7 @@ input::placeholder {
 		background-position: 100% 50%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 50% 0%;
 	}
 }
 

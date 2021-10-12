@@ -68,3 +68,22 @@ a {
 .text-sign-in {
   padding: .4em 1em .5em .6em;
 }
+
+.mute-toggle {
+  position: fixed;
+  left: .4em;
+  bottom: 1.2em;
+  z-index: 100;
+  opacity: .5;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 760px) {
+  .mute-toggle {
+    display: none;
+  }
+}
