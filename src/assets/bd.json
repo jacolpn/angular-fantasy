@@ -20,7 +20,7 @@
     },
     {
       "id": 4,
-      "name": "Two-way Data Binding",
+      "name": "Two-Way Data Binding",
       "route": "/games/introduction/fourth",
       "nameAccess": "introductionFourth"
     },

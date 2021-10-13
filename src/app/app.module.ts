@@ -22,7 +22,7 @@ import { ComponentsModule } from './shared/components/components.module';
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    GamesComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,

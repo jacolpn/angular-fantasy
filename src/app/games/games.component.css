@@ -6,8 +6,21 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 750px) {
+.wrapper > div {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  max-width: 1366px;
+}
+
+@media only screen and (max-width: 1000px) {
   .wrapper {
-    height: 90%;
+    height: 100%;
+  }
+
+  .wrapper > div {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -4,14 +4,15 @@
   align-items: center;
   justify-content: center;
   margin-top: -6em;
-  margin-right: -10em;
+  margin-left: -10em;
+  opacity: .3;
 }
 
-.angular-pt-one {
+.angular-pt-two {
   position: absolute;
   z-index: 2;
-  opacity: .4;
-  margin-top: -.8em;
+  opacity: .3;
+  margin-top: 6em;
   width: 136px;
   height: 189px;
 }

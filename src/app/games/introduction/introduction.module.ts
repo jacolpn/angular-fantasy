@@ -11,6 +11,9 @@ import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
 import { IntroductionComponent } from './introduction.component';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
+import { ReloadedComponent } from '../reloaded/reloaded.component';
+import { RevolutionsComponent } from '../revolutions/revolutions.component';
+import { ResurrectionsComponent } from '../resurrections/resurrections.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,16 @@ import { ComponentsModule } from 'src/app/shared/components/components.module';
     ThirdComponent,
     FourthComponent,
     FifthComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    ReloadedComponent,
+    RevolutionsComponent,
+    ResurrectionsComponent
   ],
   exports: [
-    IntroductionComponent
+    IntroductionComponent,
+    ReloadedComponent,
+    RevolutionsComponent,
+    ResurrectionsComponent
   ],
   imports: [
     CommonModule,
