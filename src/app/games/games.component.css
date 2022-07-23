@@ -10,9 +10,53 @@
   display: grid;
   text-align: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   max-width: 1366px;
+}
+
+.wrapper > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  position: absolute;
+}
+
+.angular-pt-one {
+  cursor: pointer;
+}
+
+.angular-pt-one > img {
+  opacity: .8;
+}
+
+.angular-pt-two > img {
+  opacity: .2;
+}
+
+.angular-pt-two > h2 {
+  opacity: .5;
+}
+
+.angular-pt-three > img {
+  opacity: .2;
+}
+
+.angular-pt-three > h2 {
+  opacity: .5;
+  margin: 0 0 4em 1.4em;
+}
+
+.angular-pt-four > img {
+  opacity: .2;
+}
+
+.angular-pt-four > h2 {
+  opacity: .5;
+  margin: 0 1.4em 4em 0;
 }
 
 @media only screen and (max-width: 1000px) {

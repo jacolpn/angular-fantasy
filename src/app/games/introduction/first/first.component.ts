@@ -14,7 +14,6 @@ export class FirstComponent implements OnInit {
   help = this.bd.help;
   codeIntroductionHelp = this.help.introduction[1];
 
-
   openHelp: boolean = false;
   textInputTS: string = "";
   textCorrectTS: string = "texto";
